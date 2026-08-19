@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { SessionUser, signIn } from "@/lib/firebase-rest";
+import { createManagedUser, SessionUser, signIn } from "@/lib/firebase-rest";
 
 type Module = "mayoreo" | "propias" | "expira" | "cargas" | "usuarios";
 
@@ -131,10 +131,8 @@ function Usuarios({ token }: { token: string }) {
     const form = new FormData(event.currentTarget);
     const body = Object.fromEntries(form.entries());
     try {
-      const response = await fetch("/api/admin/users", { method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` }, body: JSON.stringify(body) });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.error);
-      setMessage(`Usuario ${result.user.email} creado correctamente.`);
+      const result = await createManagedUser(body as Parameters<typeof createManagedUser>[0], token);
+      setMessage(`Usuario ${result.email} creado correctamente.`);
       event.currentTarget.reset(); setRole("district_uploader");
     } catch (error) { setMessage(error instanceof Error ? error.message : "No se pudo crear el usuario."); }
     finally { setBusy(false); }
