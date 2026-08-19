@@ -1,0 +1,20 @@
+.admin-layout { display:grid; grid-template-columns:1.65fr 1fr; gap:16px }
+.admin-form form { display:grid; gap:18px }
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px }
+.form-grid label { display:grid; gap:7px; color:#46546a; font-size:11px; font-weight:800 }
+.form-grid input,.form-grid select { height:43px; border:1px solid #d8dee8; border-radius:8px; background:#fff; padding:0 12px; color:var(--ink); outline:none }
+.form-grid input:focus,.form-grid select:focus { border-color:var(--blue); box-shadow:0 0 0 3px #136fd119 }
+.admin-submit { display:flex; align-items:center; justify-content:space-between; border-top:1px solid var(--line); padding-top:16px }
+.admin-submit small { color:var(--muted) }
+.admin-message { padding:11px 13px; border-radius:8px; background:#eaf3ff; color:#165a9f; font-size:12px }
+.admin-help { align-self:start }
+.role-row { display:grid; gap:5px; padding:14px 3px; border-bottom:1px solid var(--line) }
+.role-row b { font-size:12px }
+.role-row span { font-size:11px; line-height:1.5; color:var(--muted) }
+.role-row.master { border:0; background:#eef5ff; border-radius:8px; padding:13px; margin-top:10px }
+@media(max-width:1050px) { .admin-layout { grid-template-columns:1fr } }
+@media(max-width:760px) {
+  .sidebar nav { grid-template-columns:repeat(auto-fit,minmax(44px,1fr)) }
+  .form-grid { grid-template-columns:1fr }
+  .admin-submit { align-items:stretch; flex-direction:column; gap:13px }
+}

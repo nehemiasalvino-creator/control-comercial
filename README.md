@@ -17,11 +17,13 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Sin configuración Firebase se habilita temporalmente el acceso demostrativo:
-
-- Usuario: `demo@control.bo`
-- Contraseña: `Demo2026`
-
 ## Firebase
 
-Copie la configuración de la aplicación web de Firebase en `.env.local`. Active Authentication con correo/contraseña y cree Firestore y Storage. Las credenciales privadas nunca deben subirse al repositorio.
+Proyecto conectado: `control-comercial-8171e`. Active Authentication con correo/contraseña y cree Firestore y Storage. La configuración web pública se encuentra en `lib/firebase-config.ts`; las credenciales privadas nunca deben subirse al repositorio.
+
+El acceso consulta el perfil `users/{uid}` en Firestore. Los roles admitidos son
+`super_admin`, `district_uploader`, `district_viewer` y `national_viewer`.
+
+Para crear usuarios desde el panel del superadministrador, configure
+`FIREBASE_CLIENT_EMAIL` y `FIREBASE_PRIVATE_KEY` únicamente como secretos del
+servidor. No suba a GitHub el JSON de la cuenta de servicio ni su clave privada.

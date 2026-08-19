@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import { SessionUser, signIn } from "@/lib/firebase-rest";
 
-type Module = "mayoreo" | "propias" | "expira" | "cargas";
+type Module = "mayoreo" | "propias" | "expira" | "cargas" | "usuarios";
 
 const monthly = [
   { month: "Ene", gas: 1510, diesel: 998 }, { month: "Feb", gas: 1442, diesel: 820 },
@@ -34,6 +34,7 @@ function Icon({ name }: { name: string }) {
     clock: <><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></>,
     upload: <><path d="M12 16V4M8 8l4-4 4 4"/><path d="M4 15v5h16v-5"/></>,
     home: <><path d="M3 11l9-8 9 8"/><path d="M5 10v11h14V10"/></>,
+    users: <><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></>,
   };
   return <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">{paths[name]}</svg>;
 }
@@ -54,11 +55,15 @@ export default function Home() {
 
   if (!user) return <Login onSubmit={login} error={error} busy={busy} />;
 
+  const initials = user.displayName.split(" ").filter(Boolean).slice(0, 2).map(x => x[0]).join("").toUpperCase();
+  const scopeLabel = user.scope === "national" ? "Nacional" : `${user.districtId || "DCCH"} · ${user.zoneId || "Sucre"}`;
+
   const titles: Record<Module, [string, string]> = {
     mayoreo: ["Movimiento Mayorista", "Ventas, transferencias y cumplimiento PRODE"],
     propias: ["Estaciones propias", "Ventas, recaudaciones y depósitos de DCCH"],
     expira: ["EXPIRA", "Seguimiento documental y alertas de vencimiento"],
     cargas: ["Centro de cargas", "Actualización segura de información operativa"],
+    usuarios: ["Administración de usuarios", "Cuentas, roles y ámbitos de acceso"],
   };
   return (
     <main className="app-shell">
@@ -69,23 +74,25 @@ export default function Home() {
           <Nav active={module === "propias"} onClick={() => setModule("propias")} icon="station">Estaciones propias</Nav>
           <Nav active={module === "expira"} onClick={() => setModule("expira")} icon="clock">EXPIRA</Nav>
           <Nav active={module === "cargas"} onClick={() => setModule("cargas")} icon="upload">Centro de cargas</Nav>
+          {user.role === "super_admin" && <Nav active={module === "usuarios"} onClick={() => setModule("usuarios")} icon="users">Usuarios</Nav>}
         </nav>
-        <div className="scope"><small>ÁMBITO ACTIVO</small><strong>DCCH · Sucre</strong><span>Vista de jefatura</span></div>
-        <button className="profile" onClick={() => setUser(null)}><span>NM</span><div><strong>{user.displayName}</strong><small>Cerrar sesión</small></div></button>
+        <div className="scope"><small>ÁMBITO ACTIVO</small><strong>{scopeLabel}</strong><span>{user.role === "super_admin" ? "Superadministración" : "Acceso autorizado"}</span></div>
+        <button className="profile" onClick={() => setUser(null)}><span>{initials}</span><div><strong>{user.displayName}</strong><small>Cerrar sesión</small></div></button>
       </aside>
       <section className="content">
-        <header className="topbar"><div><p>Distrito Comercial Chuquisaca</p><h1>{titles[module][0]}</h1><span>{titles[module][1]}</span></div><div className="top-actions"><button className="period">Enero – Agosto 2026⌄</button><button className="avatar">NM</button></div></header>
+        <header className="topbar"><div><p>{user.scope === "national" ? "Control Comercial Nacional" : "Distrito Comercial Chuquisaca"}</p><h1>{titles[module][0]}</h1><span>{titles[module][1]}</span></div><div className="top-actions"><button className="period">Enero – Agosto 2026⌄</button><button className="avatar">{initials}</button></div></header>
         {module === "mayoreo" && <Mayoreo />}
         {module === "propias" && <Propias />}
         {module === "expira" && <Expira />}
         {module === "cargas" && <Cargas />}
+        {module === "usuarios" && user.role === "super_admin" && <Usuarios token={user.token} />}
       </section>
     </main>
   );
 }
 
 function Login({ onSubmit, error, busy }: { onSubmit: (e: FormEvent<HTMLFormElement>) => void; error: string; busy: boolean }) {
-  return <main className="login-page"><section className="login-visual"><div className="login-logo">CC</div><div className="visual-copy"><span>CONTROL COMERCIAL</span><h1>Información precisa.<br/>Decisiones oportunas.</h1><p>Ventas, abastecimiento y cumplimiento operativo en una sola plataforma nacional.</p></div><div className="grid-lines"/></section><section className="login-panel"><form onSubmit={onSubmit}><div className="mobile-logo">CC</div><span className="eyebrow">ACCESO INSTITUCIONAL</span><h2>Bienvenido</h2><p>Ingrese con su cuenta autorizada.</p><label>Correo electrónico<input name="email" type="email" defaultValue="demo@control.bo" required/></label><label>Contraseña<input name="password" type="password" defaultValue="Demo2026" required/></label>{error && <div className="error">{error}</div>}<button className="primary" disabled={busy}>{busy ? "Verificando…" : "Ingresar al sistema"}</button><small className="demo">Acceso demo: demo@control.bo · Demo2026</small></form></section></main>;
+  return <main className="login-page"><section className="login-visual"><div className="login-logo">CC</div><div className="visual-copy"><span>CONTROL COMERCIAL</span><h1>Información precisa.<br/>Decisiones oportunas.</h1><p>Ventas, abastecimiento y cumplimiento operativo en una sola plataforma nacional.</p></div><div className="grid-lines"/></section><section className="login-panel"><form onSubmit={onSubmit}><div className="mobile-logo">CC</div><span className="eyebrow">ACCESO INSTITUCIONAL</span><h2>Bienvenido</h2><p>Ingrese con su cuenta autorizada.</p><label>Correo electrónico<input name="email" type="email" autoComplete="email" required/></label><label>Contraseña<input name="password" type="password" autoComplete="current-password" required/></label>{error && <div className="error">{error}</div>}<button className="primary" disabled={busy}>{busy ? "Verificando…" : "Ingresar al sistema"}</button><small className="demo">Acceso exclusivo para usuarios autorizados.</small></form></section></main>;
 }
 
 function Nav({ active, onClick, icon, children }: { active: boolean; onClick: () => void; icon: string; children: React.ReactNode }) {
@@ -112,6 +119,27 @@ function Expira() {
 function Cargas() {
   const [file, setFile] = useState("");
   return <><section className="upload-grid">{[["Despachos de venta","Clientes privados, directos, GRACO y distribuidores","Venta"],["Transferencias","Estaciones de servicio propias de YPFB","Transferencia"],["PRODE mensual","Programación por distrito, zona y producto","PRODE"],["Recaudaciones propias","Libro anual acumulativo por estación","Recaudación"]].map((x,i)=><article className="upload-card" key={x[0]}><div className={`upload-icon u${i}`}><Icon name="upload"/></div><h3>{x[0]}</h3><p>{x[1]}</p><label className="file-button">Seleccionar Excel o CSV<input type="file" accept=".xls,.xlsx,.csv" onChange={e=>setFile(e.target.files?.[0]?.name||"")}/></label></article>)}</section>{file&&<div className="file-review"><div><strong>Archivo preparado para validación</strong><span>{file}</span></div><div><span className="status ok">Formato reconocido</span><button className="primary small">Validar y cargar</button></div></div>}<article className="card full history"><CardHead title="Historial de cargas" subtitle="Cada versión queda disponible para auditoría"/><table><thead><tr><th>Fecha</th><th>Archivo</th><th>Periodo detectado</th><th>Registros</th><th>Usuario</th><th>Estado</th></tr></thead><tbody><tr><td>18/08/2026 · 17:42</td><td>despachos_venta_2026.xls</td><td>Ene–Dic 2026</td><td>12.379</td><td>Alimentador Sucre</td><td><span className="status ok">Procesado</span></td></tr><tr><td>18/08/2026 · 17:38</td><td>transferencias_2026.xls</td><td>Ene–Dic 2026</td><td>1.841</td><td>Alimentador Sucre</td><td><span className="status ok">Procesado</span></td></tr><tr><td>01/08/2026 · 09:14</td><td>prode_agosto_2026.xlsx</td><td>Agosto 2026</td><td>31 zonas</td><td>Administrador nacional</td><td><span className="status ok">Procesado</span></td></tr></tbody></table></article></>;
+}
+
+function Usuarios({ token }: { token: string }) {
+  const [role, setRole] = useState("district_uploader");
+  const [message, setMessage] = useState("");
+  const [busy, setBusy] = useState(false);
+  const national = role === "national_viewer";
+  async function createUser(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault(); setBusy(true); setMessage("");
+    const form = new FormData(event.currentTarget);
+    const body = Object.fromEntries(form.entries());
+    try {
+      const response = await fetch("/api/admin/users", { method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` }, body: JSON.stringify(body) });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error);
+      setMessage(`Usuario ${result.user.email} creado correctamente.`);
+      event.currentTarget.reset(); setRole("district_uploader");
+    } catch (error) { setMessage(error instanceof Error ? error.message : "No se pudo crear el usuario."); }
+    finally { setBusy(false); }
+  }
+  return <section className="admin-layout"><article className="card admin-form"><CardHead title="Crear usuario" subtitle="La cuenta quedará activa y limitada al ámbito asignado"/><form onSubmit={createUser}><div className="form-grid"><label>Nombre completo<input name="displayName" required/></label><label>Correo institucional<input name="email" type="email" required/></label><label>Rol<select name="role" value={role} onChange={e=>setRole(e.target.value)}><option value="district_uploader">Alimentador distrital</option><option value="district_viewer">Consulta distrital</option><option value="national_viewer">Consulta nacional</option></select></label><label>Contraseña temporal<input name="password" type="password" minLength={8} required/></label>{!national&&<><label>Distrito<select name="districtId" defaultValue="DCCH"><option value="DCCH">DCCH · Chuquisaca</option></select></label><label>Zona comercial<select name="zoneId" defaultValue="sucre"><option value="sucre">Sucre</option></select></label></>}</div><div className="admin-submit"><small>El usuario deberá cambiar su contraseña inicial.</small><button className="primary small" disabled={busy}>{busy?"Creando…":"Crear usuario"}</button></div>{message&&<div className="admin-message">{message}</div>}</form></article><article className="card admin-help"><CardHead title="Permisos por rol" subtitle="Separación automática de responsabilidades"/><div className="role-row"><b>Alimentador distrital</b><span>Carga archivos, programa productos y gestiona EXPIRA únicamente en su zona.</span></div><div className="role-row"><b>Consulta distrital</b><span>Visualiza tableros e históricos de su distrito y zona, sin modificar datos.</span></div><div className="role-row"><b>Consulta nacional</b><span>Consulta todos los distritos y consolidados nacionales, sin administrar cuentas.</span></div><div className="role-row master"><b>Superadministrador</b><span>Crea, asigna, suspende y administra todas las cuentas y catálogos.</span></div></article></section>;
 }
 
 function CardHead({title,subtitle}:{title:string;subtitle:string}){return <header className="card-head"><div><h3>{title}</h3><p>{subtitle}</p></div><button>•••</button></header>}
