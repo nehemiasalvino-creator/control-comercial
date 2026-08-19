@@ -3,7 +3,19 @@
 import { FormEvent, useEffect, useState } from "react";
 import { assignManagedUser, createManagedUser, listManagedUsers, ManagedUser, SessionUser, signIn } from "@/lib/firebase-rest";
 
-type Module = "mayoreo" | "propias" | "expira" | "cargas" | "usuarios";
+type Module = "mayoreo" | "propias" | "expira" | "cargas" | "programaciones" | "usuarios";
+
+const programmingClients = [
+  { name:"EE.SS. Mariscal Sucre", diesel:20000, gas:1600 }, { name:"E.S. Azari", diesel:8750, gas:8000 },
+  { name:"EOSO El Morro", diesel:28567, gas:8750 }, { name:"EOSO Juana Azurduy", diesel:0, gas:21200 },
+  { name:"EOSO María Alejandra", diesel:7200, gas:2533 }, { name:"EOSO Mesa Verde", diesel:16500, gas:12500 },
+  { name:"EOSO Nayler", diesel:18033, gas:22000 }, { name:"EOSO Oqharikuna SRL", diesel:16667, gas:16333 },
+  { name:"EOSO San Antonio", diesel:8333, gas:39167 }, { name:"EOSO Trébol SRL", diesel:24400, gas:17200 },
+  { name:"EESS Ostria Gutiérrez · YPFB", diesel:5523, gas:10099 }, { name:"EESS El Tejar · YPFB", diesel:7934, gas:9226 },
+  { name:"EOSO Aiquile", diesel:4427, gas:12000 }, { name:"E.S. Buen Retiro · Padilla", diesel:4200, gas:12000 },
+  { name:"EOSO Murillo · Zudáñez", diesel:4267, gas:12000 }, { name:"E.S. Pujllay · Tarabuco", diesel:4350, gas:13500 },
+  { name:"EESS Tarabuquillo · YPFB", diesel:1652, gas:5000 }, { name:"EESS Serrano · YPFB", diesel:1109, gas:5000 },
+];
 
 const monthly = [
   { month: "Ene", gas: 1510, diesel: 998 }, { month: "Feb", gas: 1442, diesel: 820 },
@@ -33,6 +45,7 @@ function Icon({ name }: { name: string }) {
     station: <><path d="M4 21V5l8-3 8 3v16"/><path d="M9 9h6M9 13h6M9 17h6"/></>,
     clock: <><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></>,
     upload: <><path d="M12 16V4M8 8l4-4 4 4"/><path d="M4 15v5h16v-5"/></>,
+    calendar: <><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></>,
     home: <><path d="M3 11l9-8 9 8"/><path d="M5 10v11h14V10"/></>,
     users: <><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></>,
   };
@@ -63,6 +76,7 @@ export default function Home() {
     propias: ["Estaciones propias", "Ventas, recaudaciones y depósitos de DCCH"],
     expira: ["EXPIRA", "Seguimiento documental y alertas de vencimiento"],
     cargas: ["Centro de cargas", "Actualización segura de información operativa"],
+    programaciones: ["Programaciones", "Asignación diaria automática y publicación a clientes"],
     usuarios: ["Administración de usuarios", "Cuentas, roles y ámbitos de acceso"],
   };
   return (
@@ -74,6 +88,7 @@ export default function Home() {
           <Nav active={module === "propias"} onClick={() => setModule("propias")} icon="station">Estaciones propias</Nav>
           <Nav active={module === "expira"} onClick={() => setModule("expira")} icon="clock">EXPIRA</Nav>
           <Nav active={module === "cargas"} onClick={() => setModule("cargas")} icon="upload">Centro de cargas</Nav>
+          {(user.role === "super_admin" || user.role === "district_uploader") && <Nav active={module === "programaciones"} onClick={() => setModule("programaciones")} icon="calendar">Programaciones</Nav>}
           {user.role === "super_admin" && <Nav active={module === "usuarios"} onClick={() => setModule("usuarios")} icon="users">Usuarios</Nav>}
         </nav>
         <div className="scope"><small>ÁMBITO ACTIVO</small><strong>{scopeLabel}</strong><span>{user.role === "super_admin" ? "Superadministración" : "Acceso autorizado"}</span></div>
@@ -85,6 +100,7 @@ export default function Home() {
         {module === "propias" && <Propias />}
         {module === "expira" && <Expira />}
         {module === "cargas" && <Cargas />}
+        {module === "programaciones" && (user.role === "super_admin" || user.role === "district_uploader") && <Programaciones />}
         {module === "usuarios" && user.role === "super_admin" && <Usuarios token={user.token} />}
       </section>
     </main>
@@ -119,6 +135,30 @@ function Expira() {
 function Cargas() {
   const [file, setFile] = useState("");
   return <><section className="upload-grid">{[["Despachos de venta","Clientes privados, directos, GRACO y distribuidores","Venta"],["Transferencias","Estaciones de servicio propias de YPFB","Transferencia"],["PRODE mensual","Programación por distrito, zona y producto","PRODE"],["Recaudaciones propias","Libro anual acumulativo por estación","Recaudación"]].map((x,i)=><article className="upload-card" key={x[0]}><div className={`upload-icon u${i}`}><Icon name="upload"/></div><h3>{x[0]}</h3><p>{x[1]}</p><label className="file-button">Seleccionar Excel o CSV<input type="file" accept=".xls,.xlsx,.csv" onChange={e=>setFile(e.target.files?.[0]?.name||"")}/></label></article>)}</section>{file&&<div className="file-review"><div><strong>Archivo preparado para validación</strong><span>{file}</span></div><div><span className="status ok">Formato reconocido</span><button className="primary small">Validar y cargar</button></div></div>}<article className="card full history"><CardHead title="Historial de cargas" subtitle="Cada versión queda disponible para auditoría"/><table><thead><tr><th>Fecha</th><th>Archivo</th><th>Periodo detectado</th><th>Registros</th><th>Usuario</th><th>Estado</th></tr></thead><tbody><tr><td>18/08/2026 · 17:42</td><td>despachos_venta_2026.xls</td><td>Ene–Dic 2026</td><td>12.379</td><td>Alimentador Sucre</td><td><span className="status ok">Procesado</span></td></tr><tr><td>18/08/2026 · 17:38</td><td>transferencias_2026.xls</td><td>Ene–Dic 2026</td><td>1.841</td><td>Alimentador Sucre</td><td><span className="status ok">Procesado</span></td></tr><tr><td>01/08/2026 · 09:14</td><td>prode_agosto_2026.xlsx</td><td>Agosto 2026</td><td>31 zonas</td><td>Administrador nacional</td><td><span className="status ok">Procesado</span></td></tr></tbody></table></article></>;
+}
+
+type ProgramRow = (typeof programmingClients)[number] & { programmedDiesel: number; programmedGas: number; pendingDiesel: number; pendingGas: number };
+
+function Programaciones() {
+  const [date, setDate] = useState("2026-08-19");
+  const [availableDiesel, setAvailableDiesel] = useState(243400);
+  const [availableGas, setAvailableGas] = useState(310500);
+  const [rows, setRows] = useState<ProgramRow[]>(programmingClients.map(client => ({...client, programmedDiesel:0, programmedGas:0, pendingDiesel:0, pendingGas:0})));
+  const allocate = (available: number, key: "diesel"|"gas") => {
+    const totalWeight = rows.reduce((sum,row)=>sum+row[key],0); let remaining=available;
+    return rows.map((row,index)=>{
+      const amount=index===rows.length-1?remaining:Math.min(remaining,Math.max(0,Math.round((available*row[key]/totalWeight)/500)*500));
+      remaining-=amount; return amount;
+    });
+  };
+  function automatic() {
+    const diesel=allocate(availableDiesel,"diesel"), gas=allocate(availableGas,"gas");
+    setRows(current=>current.map((row,index)=>({...row,programmedDiesel:diesel[index],programmedGas:gas[index]})));
+  }
+  function change(index:number,field:"programmedDiesel"|"programmedGas"|"pendingDiesel"|"pendingGas",value:string){setRows(current=>current.map((row,i)=>i===index?{...row,[field]:Math.max(0,Number(value)||0)}:row))}
+  const dieselTotal=rows.reduce((sum,row)=>sum+row.programmedDiesel,0), gasTotal=rows.reduce((sum,row)=>sum+row.programmedGas,0);
+  const fmt=(value:number)=>new Intl.NumberFormat("es-BO").format(value);
+  return <section className="programming"><div className="program-toolbar"><div className="supply"><label>Fecha de programación<input type="date" value={date} onChange={e=>setDate(e.target.value)}/></label><label>Diésel disponible hoy (L)<input type="number" min="0" step="500" value={availableDiesel} onChange={e=>setAvailableDiesel(Number(e.target.value))}/></label><label>Gasolina disponible hoy (L)<input type="number" min="0" step="500" value={availableGas} onChange={e=>setAvailableGas(Number(e.target.value))}/></label></div><div className="program-buttons"><button className="primary small" onClick={automatic}>Programar automáticamente</button><button className="secondary" onClick={()=>window.print()}>Imprimir publicación</button></div></div><section className="kpi-grid"><Kpi label="DIÉSEL DISPONIBLE" value={`${fmt(availableDiesel)} L`} note={`${fmt(Math.max(0,availableDiesel-dieselTotal))} L sin asignar`}/><Kpi label="DIÉSEL PROGRAMADO" value={`${fmt(dieselTotal)} L`} note={`${Math.round(dieselTotal/Math.max(1,availableDiesel)*100)}% del disponible`} tone="violet"/><Kpi label="GASOLINA DISPONIBLE" value={`${fmt(availableGas)} L`} note={`${fmt(Math.max(0,availableGas-gasTotal))} L sin asignar`} tone="green"/><Kpi label="GASOLINA PROGRAMADA" value={`${fmt(gasTotal)} L`} note={`${Math.round(gasTotal/Math.max(1,availableGas)*100)}% del disponible`} tone="amber"/></section><article className="card program-report"><header className="publication-head"><div><small>YPFB · DISTRITO COMERCIAL CHUQUISACA</small><h2>Programación diaria de combustibles</h2><p>Fecha: {date.split("-").reverse().join("/")} · Zona comercial Sucre</p></div><span>Borrador editable</span></header><div className="program-table"><table><thead><tr><th>Cliente / estación</th><th>Prom. diésel</th><th>Pendiente diésel</th><th>Diésel programado</th><th>Prom. gasolina</th><th>Pendiente gasolina</th><th>Gasolina programada</th></tr></thead><tbody>{rows.map((row,index)=><tr key={row.name}><td><strong>{row.name}</strong></td><td>{fmt(row.diesel)}</td><td><input type="number" value={row.pendingDiesel||""} onChange={e=>change(index,"pendingDiesel",e.target.value)}/></td><td><input className="programmed" type="number" value={row.programmedDiesel||""} onChange={e=>change(index,"programmedDiesel",e.target.value)}/></td><td>{fmt(row.gas)}</td><td><input type="number" value={row.pendingGas||""} onChange={e=>change(index,"pendingGas",e.target.value)}/></td><td><input className="programmed" type="number" value={row.programmedGas||""} onChange={e=>change(index,"programmedGas",e.target.value)}/></td></tr>)}</tbody><tfoot><tr><td>TOTAL PROGRAMADO A DESPACHAR</td><td/><td>{fmt(rows.reduce((s,r)=>s+r.pendingDiesel,0))}</td><td>{fmt(dieselTotal)}</td><td/><td>{fmt(rows.reduce((s,r)=>s+r.pendingGas,0))}</td><td>{fmt(gasTotal)}</td></tr></tfoot></table></div><footer>Propuesta basada en promedios históricos de la planilla operativa. Cantidades revisadas por el alimentador distrital antes de publicación.</footer></article></section>;
 }
 
 function Usuarios({ token }: { token: string }) {

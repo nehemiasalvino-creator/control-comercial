@@ -24,9 +24,21 @@
 .user-item b,.user-item small { overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
 .user-item b { font-size:12px }.user-item small { color:var(--muted); font-size:10px }
 .user-item em { width:max-content; padding:3px 7px; border-radius:10px; background:#fff3df; color:#94600d; font-size:9px; font-style:normal; font-weight:800 }
+.program-toolbar { display:flex; justify-content:space-between; align-items:end; gap:18px; padding:17px; margin-bottom:16px; border:1px solid var(--line); border-radius:11px; background:#fff }
+.supply { display:flex; gap:13px; flex-wrap:wrap }.supply label { display:grid; gap:6px; color:#46546a; font-size:10px; font-weight:800 }
+.supply input { width:180px; height:40px; padding:0 11px; border:1px solid #d8dee8; border-radius:8px }
+.program-buttons { display:flex; gap:9px }.secondary { padding:10px 15px; border:1px solid #bfd0e4; border-radius:8px; background:#fff; color:#185b9e; font-weight:800; cursor:pointer }
+.publication-head { display:flex; justify-content:space-between; align-items:start; padding-bottom:14px; border-bottom:2px solid #173a64 }
+.publication-head small { color:var(--blue); font-weight:900; letter-spacing:.08em }.publication-head h2 { margin:6px 0 3px; font-size:20px }.publication-head p { margin:0; color:var(--muted); font-size:11px }
+.publication-head>span { padding:5px 9px; border-radius:14px; background:#fff3df; color:#98620e; font-size:9px; font-weight:900 }
+.program-table { overflow:auto; margin-top:13px }.program-table table { min-width:980px }.program-table td:first-child { min-width:245px }
+.program-table input { width:105px; height:32px; padding:0 7px; border:1px solid #dbe2eb; border-radius:6px; text-align:right }.program-table input.programmed { border-color:#8dbce9; background:#f1f7ff; color:#0e579e; font-weight:800 }
+.program-table tfoot td { border-top:2px solid #173a64; background:#f4f7fb; font-weight:900 }.program-report footer { padding-top:13px; color:var(--muted); font-size:9px }
 @media(max-width:1050px) { .admin-layout { grid-template-columns:1fr } }
 @media(max-width:760px) {
   .sidebar nav { grid-template-columns:repeat(auto-fit,minmax(44px,1fr)) }
   .form-grid { grid-template-columns:1fr }
   .admin-submit { align-items:stretch; flex-direction:column; gap:13px }
+  .program-toolbar,.program-buttons { align-items:stretch; flex-direction:column }.supply input { width:100% }
 }
+@media print { body{background:#fff}.sidebar,.topbar,.program-toolbar,.kpi-grid{display:none!important}.app-shell{display:block}.content{padding:0;display:block}.program-report{border:0;padding:0}.publication-head>span{display:none}.program-table{overflow:visible}.program-table table{min-width:0;font-size:8px}.program-table input{border:0;background:transparent!important;width:70px;font-size:8px}.program-report footer{font-size:8px} }
