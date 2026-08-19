@@ -1,7 +1,7 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { createManagedUser, SessionUser, signIn } from "@/lib/firebase-rest";
+import { FormEvent, useEffect, useState } from "react";
+import { assignManagedUser, createManagedUser, listManagedUsers, ManagedUser, SessionUser, signIn } from "@/lib/firebase-rest";
 
 type Module = "mayoreo" | "propias" | "expira" | "cargas" | "usuarios";
 
@@ -123,9 +123,17 @@ function Cargas() {
 
 function Usuarios({ token }: { token: string }) {
   const [role, setRole] = useState("district_uploader");
+  const [users, setUsers] = useState<ManagedUser[]>([]);
+  const [selected, setSelected] = useState<ManagedUser | null>(null);
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
   const national = role === "national_viewer";
+  async function refreshUsers(selectUid?: string) {
+    const data = await listManagedUsers(token);
+    setUsers(data);
+    if (selectUid) setSelected(data.find(user => user.uid === selectUid) || null);
+  }
+  useEffect(() => { refreshUsers().catch(error => setMessage(error.message)); }, []);
   async function createUser(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); setBusy(true); setMessage("");
     const formElement = event.currentTarget;
@@ -133,12 +141,21 @@ function Usuarios({ token }: { token: string }) {
     const body = Object.fromEntries(form.entries());
     try {
       const result = await createManagedUser(body as Parameters<typeof createManagedUser>[0], token);
-      setMessage(`Usuario ${result.email} creado correctamente.`);
-      formElement.reset(); setRole("district_uploader");
+      await refreshUsers(result.uid);
+      setMessage(`Usuario ${result.email} registrado. Ahora asígnale un rol.`);
+      formElement.reset();
     } catch (error) { setMessage(error instanceof Error ? error.message : "No se pudo crear el usuario."); }
     finally { setBusy(false); }
   }
-  return <section className="admin-layout"><article className="card admin-form"><CardHead title="Crear usuario" subtitle="La cuenta quedará activa y limitada al ámbito asignado"/><form onSubmit={createUser}><div className="form-grid"><label>Nombre completo<input name="displayName" required/></label><label>Correo institucional<input name="email" type="email" required/></label><label>Rol<select name="role" value={role} onChange={e=>setRole(e.target.value)}><option value="district_uploader">Alimentador distrital</option><option value="district_viewer">Consulta distrital</option><option value="national_viewer">Consulta nacional</option></select></label><label>Contraseña temporal<input name="password" type="password" minLength={8} required/></label>{!national&&<><label>Distrito<select name="districtId" defaultValue="DCCH"><option value="DCCH">DCCH · Chuquisaca</option></select></label><label>Zona comercial<select name="zoneId" defaultValue="sucre"><option value="sucre">Sucre</option></select></label></>}</div><div className="admin-submit"><small>El usuario deberá cambiar su contraseña inicial.</small><button className="primary small" disabled={busy}>{busy?"Creando…":"Crear usuario"}</button></div>{message&&<div className="admin-message">{message}</div>}</form></article><article className="card admin-help"><CardHead title="Permisos por rol" subtitle="Separación automática de responsabilidades"/><div className="role-row"><b>Alimentador distrital</b><span>Carga archivos, programa productos y gestiona EXPIRA únicamente en su zona.</span></div><div className="role-row"><b>Consulta distrital</b><span>Visualiza tableros e históricos de su distrito y zona, sin modificar datos.</span></div><div className="role-row"><b>Consulta nacional</b><span>Consulta todos los distritos y consolidados nacionales, sin administrar cuentas.</span></div><div className="role-row master"><b>Superadministrador</b><span>Crea, asigna, suspende y administra todas las cuentas y catálogos.</span></div></article></section>;
+  async function assignRole(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault(); if (!selected) return; setBusy(true); setMessage("");
+    const data = new FormData(event.currentTarget);
+    const values = { role: String(data.get("role")), districtId: String(data.get("districtId") || ""), zoneId: String(data.get("zoneId") || "") };
+    try { await assignManagedUser(selected.uid, values, token); await refreshUsers(selected.uid); setMessage(`Rol asignado a ${selected.email}.`); }
+    catch (error) { setMessage(error instanceof Error ? error.message : "No se pudo asignar el rol."); }
+    finally { setBusy(false); }
+  }
+  return <section className="admin-layout"><article className="card admin-form"><CardHead title="Registrar usuario" subtitle="Primero crea la cuenta; después asigna sus permisos"/><form onSubmit={createUser}><div className="form-grid"><label>Nombre completo<input name="displayName" required/></label><label>Correo institucional<input name="email" type="email" required/></label><label>Contraseña temporal<input name="password" type="password" minLength={8} required/></label></div><div className="admin-submit"><small>La cuenta quedará pendiente y todavía no podrá ingresar.</small><button className="primary small" disabled={busy}>{busy?"Registrando…":"Registrar usuario"}</button></div></form>{selected&&<form className="assignment" onSubmit={assignRole}><h3>Asignar permisos a {selected.displayName}</h3><div className="form-grid"><label>Rol<select name="role" value={role} onChange={e=>setRole(e.target.value)}><option value="district_uploader">Alimentador distrital</option><option value="district_viewer">Consulta distrital</option><option value="national_viewer">Consulta nacional</option></select></label>{!national&&<><label>Distrito<select name="districtId" defaultValue={selected.districtId||"DCCH"}><option value="DCCH">DCCH · Chuquisaca</option></select></label><label>Zona comercial<select name="zoneId" defaultValue={selected.zoneId||"sucre"}><option value="sucre">Sucre</option></select></label></>}</div><button className="primary small" disabled={busy}>Guardar rol y activar</button></form>}{message&&<div className="admin-message">{message}</div>}</article><article className="card admin-users"><CardHead title="Usuarios registrados" subtitle="Selecciona una cuenta para administrar sus permisos"/><div className="user-list">{users.map(user=><button key={user.uid} className={selected?.uid===user.uid?"user-item selected":"user-item"} onClick={()=>{setSelected(user);setRole(user.role==="unassigned"?"district_uploader":user.role)}}><span>{user.displayName?.slice(0,2).toUpperCase()||"US"}</span><div><b>{user.displayName}</b><small>{user.email}</small><em>{user.status==="pending"?"Pendiente de rol":user.role}</em></div></button>)}</div></article></section>;
 }
 
 function CardHead({title,subtitle}:{title:string;subtitle:string}){return <header className="card-head"><div><h3>{title}</h3><p>{subtitle}</p></div><button>•••</button></header>}

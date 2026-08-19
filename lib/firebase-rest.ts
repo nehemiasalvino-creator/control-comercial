@@ -17,9 +17,11 @@ type ManagedUserInput = {
   email: string;
   displayName: string;
   password: string;
-  role: "district_uploader" | "district_viewer" | "national_viewer";
-  districtId?: string;
-  zoneId?: string;
+};
+
+export type ManagedUser = {
+  uid: string; email: string; displayName: string; role: string; status: string;
+  scope?: string; districtId?: string; zoneId?: string;
 };
 
 export async function signIn(email: string, password: string): Promise<SessionUser> {
@@ -65,18 +67,56 @@ export async function createManagedUser(input: ManagedUserInput, adminToken: str
     if (account.error?.message === "EMAIL_EXISTS") throw new Error("Ese correo ya está registrado.");
     throw new Error("No se pudo crear la cuenta de acceso.");
   }
-  const national = input.role === "national_viewer";
   const fields: Record<string, object> = {
     email: { stringValue: input.email }, displayName: { stringValue: input.displayName },
-    role: { stringValue: input.role }, scope: { stringValue: national ? "national" : "district" },
-    status: { stringValue: "active" }, createdAt: { timestampValue: new Date().toISOString() },
+    role: { stringValue: "unassigned" }, scope: { stringValue: "unassigned" },
+    status: { stringValue: "pending" }, createdAt: { timestampValue: new Date().toISOString() },
   };
-  if (!national && input.districtId) fields.districtId = { stringValue: input.districtId };
-  if (!national && input.zoneId) fields.zoneId = { stringValue: input.zoneId };
   const profileResponse = await fetch(
     `https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/users?documentId=${account.localId}`,
     { method: "POST", headers: { Authorization: `Bearer ${adminToken}`, "Content-Type": "application/json" }, body: JSON.stringify({ fields }) },
   );
   if (!profileResponse.ok) throw new Error("La cuenta se creó, pero no se pudo asignar su perfil.");
   return { uid: account.localId as string, email: input.email };
+}
+
+function fieldValue(fields: Record<string, { stringValue?: string }>, name: string) {
+  return fields[name]?.stringValue || "";
+}
+
+export async function listManagedUsers(adminToken: string): Promise<ManagedUser[]> {
+  const response = await fetch(
+    `https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/users?pageSize=100`,
+    { headers: { Authorization: `Bearer ${adminToken}` } },
+  );
+  const result = await response.json();
+  if (!response.ok) throw new Error("No se pudo cargar la lista de usuarios.");
+  return (result.documents || []).map((document: { name: string; fields: Record<string, { stringValue?: string }> }) => ({
+    uid: document.name.split("/").pop() || "", email: fieldValue(document.fields, "email"),
+    displayName: fieldValue(document.fields, "displayName"), role: fieldValue(document.fields, "role"),
+    status: fieldValue(document.fields, "status"), scope: fieldValue(document.fields, "scope"),
+    districtId: fieldValue(document.fields, "districtId"), zoneId: fieldValue(document.fields, "zoneId"),
+  }));
+}
+
+export async function assignManagedUser(
+  uid: string,
+  values: { role: string; districtId?: string; zoneId?: string },
+  adminToken: string,
+) {
+  const national = values.role === "national_viewer";
+  const fields: Record<string, object> = {
+    role: { stringValue: values.role }, scope: { stringValue: national ? "national" : "district" },
+    status: { stringValue: "active" }, updatedAt: { timestampValue: new Date().toISOString() },
+  };
+  if (!national) {
+    fields.districtId = { stringValue: values.districtId || "DCCH" };
+    fields.zoneId = { stringValue: values.zoneId || "sucre" };
+  }
+  const masks = Object.keys(fields).map(name => `updateMask.fieldPaths=${encodeURIComponent(name)}`).join("&");
+  const response = await fetch(
+    `https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/users/${uid}?${masks}`,
+    { method: "PATCH", headers: { Authorization: `Bearer ${adminToken}`, "Content-Type": "application/json" }, body: JSON.stringify({ fields }) },
+  );
+  if (!response.ok) throw new Error("No se pudo asignar el rol.");
 }

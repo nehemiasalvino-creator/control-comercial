@@ -12,6 +12,18 @@
 .role-row b { font-size:12px }
 .role-row span { font-size:11px; line-height:1.5; color:var(--muted) }
 .role-row.master { border:0; background:#eef5ff; border-radius:8px; padding:13px; margin-top:10px }
+.assignment { margin-top:22px; padding-top:20px; border-top:1px solid var(--line) }
+.assignment h3 { margin:0; font-size:15px }
+.assignment .primary { justify-self:end }
+.admin-users { align-self:start }
+.user-list { display:grid; gap:8px; max-height:560px; overflow:auto }
+.user-item { width:100%; display:flex; align-items:center; gap:11px; padding:11px; border:1px solid var(--line); border-radius:9px; background:#fff; color:var(--ink); text-align:left; cursor:pointer }
+.user-item:hover,.user-item.selected { border-color:var(--blue); background:#eef5ff }
+.user-item>span { display:grid; place-items:center; flex:0 0 36px; height:36px; border-radius:50%; background:#dcecff; color:#155a9d; font-size:11px; font-weight:900 }
+.user-item div { min-width:0; display:grid; gap:3px }
+.user-item b,.user-item small { overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+.user-item b { font-size:12px }.user-item small { color:var(--muted); font-size:10px }
+.user-item em { width:max-content; padding:3px 7px; border-radius:10px; background:#fff3df; color:#94600d; font-size:9px; font-style:normal; font-weight:800 }
 @media(max-width:1050px) { .admin-layout { grid-template-columns:1fr } }
 @media(max-width:760px) {
   .sidebar nav { grid-template-columns:repeat(auto-fit,minmax(44px,1fr)) }
