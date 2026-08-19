@@ -128,12 +128,13 @@ function Usuarios({ token }: { token: string }) {
   const national = role === "national_viewer";
   async function createUser(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); setBusy(true); setMessage("");
-    const form = new FormData(event.currentTarget);
+    const formElement = event.currentTarget;
+    const form = new FormData(formElement);
     const body = Object.fromEntries(form.entries());
     try {
       const result = await createManagedUser(body as Parameters<typeof createManagedUser>[0], token);
       setMessage(`Usuario ${result.email} creado correctamente.`);
-      event.currentTarget.reset(); setRole("district_uploader");
+      formElement.reset(); setRole("district_uploader");
     } catch (error) { setMessage(error instanceof Error ? error.message : "No se pudo crear el usuario."); }
     finally { setBusy(false); }
   }
