@@ -120,3 +120,24 @@ export async function assignManagedUser(
   );
   if (!response.ok) throw new Error("No se pudo asignar el rol.");
 }
+
+export async function loadProgrammingDays(token:string, dates:string[]) {
+  const entries=await Promise.all(dates.map(async date=>{
+    const id=`DCCH_sucre_${date}`;
+    const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/programmingDays/${id}`,{headers:{Authorization:`Bearer ${token}`}});
+    if(response.status===404)return [date,null] as const;
+    const result=await response.json();
+    if(!response.ok)throw new Error("No se pudo recuperar la programación semanal.");
+    return [date,JSON.parse(result.fields?.payload?.stringValue||"null")] as const;
+  }));
+  return Object.fromEntries(entries.filter(([,value])=>value));
+}
+
+export async function saveProgrammingDay(token:string,date:string,payload:unknown,automaticPercent:number) {
+  const next=new Date(`${date}T12:00:00`);next.setDate(next.getDate()+1);
+  const editableUntil=`${next.toISOString().slice(0,10)}T04:00:00.000Z`;
+  const id=`DCCH_sucre_${date}`;
+  const fields={districtId:{stringValue:"DCCH"},zoneId:{stringValue:"sucre"},date:{stringValue:date},editableUntil:{timestampValue:editableUntil},payload:{stringValue:JSON.stringify(payload)},automaticPercent:{integerValue:String(automaticPercent)},updatedAt:{timestampValue:new Date().toISOString()}};
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/programmingDays/${id}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});
+  if(!response.ok)throw new Error("No se pudo guardar la programación en Firestore.");
+}

@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function profile() { return get(/databases/$(database)/documents/users/$(request.auth.uid)).data; }
+    function active() { return signedIn() && profile().status == "active"; }
+    function superAdmin() { return active() && profile().role == "super_admin"; }
+    function nationalViewer() { return active() && profile().role == "national_viewer"; }
+    function districtUploader() { return active() && profile().role == "district_uploader"; }
+    function sameScope(data) { return profile().districtId == data.districtId && profile().zoneId == data.zoneId; }
+
+    match /users/{userId} {
+      allow read: if signedIn() && (request.auth.uid == userId || superAdmin());
+      allow create, update, delete: if superAdmin();
+    }
+
+    match /programmingDays/{programId} {
+      allow read: if active() && (superAdmin() || nationalViewer() || sameScope(resource.data));
+      allow create: if (superAdmin() || (districtUploader() && sameScope(request.resource.data)))
+        && request.time < request.resource.data.editableUntil;
+      allow update: if (superAdmin() || (districtUploader() && sameScope(resource.data)))
+        && request.time < resource.data.editableUntil
+        && request.resource.data.editableUntil == resource.data.editableUntil;
+      allow delete: if false;
+    }
+
+    match /{document=**} { allow read, write: if false; }
+  }
+}
