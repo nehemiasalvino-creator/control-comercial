@@ -127,9 +127,9 @@ export async function assignManagedUser(
   if (!response.ok) throw new Error("No se pudo asignar el rol.");
 }
 
-export async function loadProgrammingDays(token:string, dates:string[]) {
+export async function loadProgrammingDays(token:string, dates:string[],districtId="DCCH",zoneId="sucre") {
   const entries=await Promise.all(dates.map(async date=>{
-    const id=`DCCH_sucre_${date}`;
+    const id=`${districtId}_${zoneId}_${date}`;
     const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/programmingDays/${id}`,{headers:{Authorization:`Bearer ${token}`}});
     if(response.status===404)return [date,null] as const;
     const result=await response.json();
@@ -139,11 +139,11 @@ export async function loadProgrammingDays(token:string, dates:string[]) {
   return Object.fromEntries(entries.filter(([,value])=>value));
 }
 
-export async function saveProgrammingDay(token:string,date:string,payload:unknown,automaticPercent:number) {
+export async function saveProgrammingDay(token:string,date:string,payload:unknown,automaticPercent:number,districtId="DCCH",zoneId="sucre") {
   const next=new Date(`${date}T12:00:00`);next.setDate(next.getDate()+1);
   const editableUntil=`${next.toISOString().slice(0,10)}T04:00:00.000Z`;
-  const id=`DCCH_sucre_${date}`;
-  const fields={districtId:{stringValue:"DCCH"},zoneId:{stringValue:"sucre"},date:{stringValue:date},editableUntil:{timestampValue:editableUntil},payload:{stringValue:JSON.stringify(payload)},automaticPercent:{integerValue:String(automaticPercent)},updatedAt:{timestampValue:new Date().toISOString()}};
+  const id=`${districtId}_${zoneId}_${date}`;
+  const fields={districtId:{stringValue:districtId},zoneId:{stringValue:zoneId},date:{stringValue:date},editableUntil:{timestampValue:editableUntil},payload:{stringValue:JSON.stringify(payload)},automaticPercent:{integerValue:String(automaticPercent)},updatedAt:{timestampValue:new Date().toISOString()}};
   const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/programmingDays/${id}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});
   if(!response.ok)throw new Error("No se pudo guardar la programación en Firestore.");
 }
@@ -170,6 +170,15 @@ export async function saveIssuedProforma(token:string,id:string,client:ProformaC
   const fields={districtId:{stringValue:client.districtId},zoneId:{stringValue:client.zoneId},clientId:{stringValue:client.id},date:{stringValue:date},number:{stringValue:number},payload:{stringValue:JSON.stringify(payload)},createdAt:{timestampValue:new Date().toISOString()}};
   const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/proformas/${id}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});
   if(!response.ok)throw new Error("No se pudo registrar la emisión de la proforma.");
+}
+
+export async function getIssuedProformaNumber(token:string,clientId:string,date:string):Promise<string|null> {
+  const id=`DCCH_sucre_${clientId}_${date}`;
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/proformas/${id}`,{headers:{Authorization:`Bearer ${token}`}});
+  if(response.status===404)return null;
+  const result=await response.json();
+  if(!response.ok)throw new Error("No se pudo verificar si la proforma ya fue emitida.");
+  return result.fields?.number?.stringValue||null;
 }
 
 export async function getNextProformaSequence(token:string,year:string):Promise<number> {
