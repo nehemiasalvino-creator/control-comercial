@@ -24,6 +24,19 @@ service cloud.firestore {
       allow delete: if false;
     }
 
+    match /proformaClients/{clientId} {
+      allow read: if active() && (superAdmin() || nationalViewer() || sameScope(resource.data));
+      allow create: if superAdmin() || (districtUploader() && sameScope(request.resource.data));
+      allow update: if superAdmin() || (districtUploader() && sameScope(resource.data));
+      allow delete: if false;
+    }
+
+    match /proformas/{proformaId} {
+      allow read: if active() && (superAdmin() || nationalViewer() || sameScope(resource.data));
+      allow create, update: if superAdmin() || (districtUploader() && sameScope(request.resource.data));
+      allow delete: if false;
+    }
+
     match /{document=**} { allow read, write: if false; }
   }
 }

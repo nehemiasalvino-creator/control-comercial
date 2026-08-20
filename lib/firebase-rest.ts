@@ -24,6 +24,12 @@ export type ManagedUser = {
   scope?: string; districtId?: string; zoneId?: string;
 };
 
+export type ProformaProduct = { detail:string; volume:number; unit:string; price:number };
+export type ProformaClient = {
+  id:string; name:string; controlledRegistry:string; pickupPlace:string; pickupRegistries:string;
+  validityDays:number; products:ProformaProduct[]; districtId:string; zoneId:string;
+};
+
 export async function signIn(email: string, password: string): Promise<SessionUser> {
   const response = await fetch(
     `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`,
@@ -140,4 +146,28 @@ export async function saveProgrammingDay(token:string,date:string,payload:unknow
   const fields={districtId:{stringValue:"DCCH"},zoneId:{stringValue:"sucre"},date:{stringValue:date},editableUntil:{timestampValue:editableUntil},payload:{stringValue:JSON.stringify(payload)},automaticPercent:{integerValue:String(automaticPercent)},updatedAt:{timestampValue:new Date().toISOString()}};
   const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/programmingDays/${id}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});
   if(!response.ok)throw new Error("No se pudo guardar la programación en Firestore.");
+}
+
+export async function listProformaClients(token:string):Promise<ProformaClient[]> {
+  const query={structuredQuery:{from:[{collectionId:"proformaClients"}],where:{compositeFilter:{op:"AND",filters:[{fieldFilter:{field:{fieldPath:"districtId"},op:"EQUAL",value:{stringValue:"DCCH"}}},{fieldFilter:{field:{fieldPath:"zoneId"},op:"EQUAL",value:{stringValue:"sucre"}}}]}},limit:200}};
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents:runQuery`,{method:"POST",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(query)});
+  const result=await response.json();
+  if(!response.ok)throw new Error("No se pudo recuperar el registro de empresas.");
+  return (result||[]).map((entry:{document?:{name:string;fields:Record<string,{stringValue?:string}>}})=>entry.document).filter(Boolean).map((document:{name:string;fields:Record<string,{stringValue?:string}>})=>{
+    const payload=JSON.parse(document.fields?.payload?.stringValue||"{}");
+    return {...payload,id:document.name.split("/").pop()||payload.id};
+  });
+}
+
+export async function saveProformaClient(token:string,client:ProformaClient) {
+  const fields={districtId:{stringValue:client.districtId},zoneId:{stringValue:client.zoneId},name:{stringValue:client.name},payload:{stringValue:JSON.stringify(client)},updatedAt:{timestampValue:new Date().toISOString()}};
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/proformaClients/${client.id}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});
+  if(!response.ok)throw new Error("No se pudo guardar la empresa en Firestore.");
+}
+
+export async function saveIssuedProforma(token:string,id:string,client:ProformaClient,date:string,number:string) {
+  const payload={client,date,number,issuedAt:new Date().toISOString()};
+  const fields={districtId:{stringValue:client.districtId},zoneId:{stringValue:client.zoneId},clientId:{stringValue:client.id},date:{stringValue:date},number:{stringValue:number},payload:{stringValue:JSON.stringify(payload)},createdAt:{timestampValue:new Date().toISOString()}};
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/proformas/${id}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});
+  if(!response.ok)throw new Error("No se pudo registrar la emisión de la proforma.");
 }
