@@ -4,7 +4,7 @@ export type SessionUser = {
   uid: string;
   email: string;
   displayName: string;
-  role: "super_admin" | "district_uploader" | "district_viewer" | "national_viewer";
+  role: "super_admin" | "district_admin" | "zone_admin" | "district_uploader" | "district_viewer" | "national_viewer";
   scope: "national" | "district";
   districtId?: string;
   zoneId?: string;
@@ -23,6 +23,9 @@ export type ManagedUser = {
   uid: string; email: string; displayName: string; role: string; status: string;
   scope?: string; districtId?: string; zoneId?: string;
 };
+
+export type CommercialDistrict={id:string;code:string;name:string};
+export type CommercialZone={id:string;districtId:string;name:string};
 
 export type ProformaProduct = { detail:string; volume:number; unit:string; price:number };
 export type ProformaClient = {
@@ -117,7 +120,7 @@ export async function assignManagedUser(
   };
   if (!national) {
     fields.districtId = { stringValue: values.districtId || "DCCH" };
-    fields.zoneId = { stringValue: values.zoneId || "sucre" };
+    fields.zoneId = { stringValue: values.role === "district_admin" || values.role === "district_viewer" ? "" : values.zoneId || "sucre" };
   }
   const masks = Object.keys(fields).map(name => `updateMask.fieldPaths=${encodeURIComponent(name)}`).join("&");
   const response = await fetch(
@@ -125,6 +128,41 @@ export async function assignManagedUser(
     { method: "PATCH", headers: { Authorization: `Bearer ${adminToken}`, "Content-Type": "application/json" }, body: JSON.stringify({ fields }) },
   );
   if (!response.ok) throw new Error("No se pudo asignar el rol.");
+}
+
+function documentFields(document:{name:string;fields?:Record<string,{stringValue?:string}>}){
+  const fields=document.fields||{};
+  return {id:fieldValue(fields,"id")||document.name.split("/").pop()||"",code:fieldValue(fields,"code"),name:fieldValue(fields,"name"),districtId:fieldValue(fields,"districtId")};
+}
+
+export async function listCommercialDistricts(token:string):Promise<CommercialDistrict[]> {
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/districts?pageSize=100`,{headers:{Authorization:`Bearer ${token}`}});
+  if(response.status===404)return [{id:"DCCH",code:"DCCH",name:"Chuquisaca"}];
+  const result=await response.json();if(!response.ok)throw new Error("No se pudieron cargar los distritos.");
+  const rows=(result.documents||[]).map(documentFields) as CommercialDistrict[];
+  return [{id:"DCCH",code:"DCCH",name:"Chuquisaca"},...rows.filter(row=>row.id!=="DCCH")];
+}
+
+export async function saveCommercialDistrict(token:string,district:CommercialDistrict){
+  const id=district.code.trim().toUpperCase(),fields={code:{stringValue:id},name:{stringValue:district.name.trim()},createdAt:{timestampValue:new Date().toISOString()}};
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/districts/${id}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});
+  if(!response.ok)throw new Error("No se pudo crear el distrito.");return {...district,id,code:id};
+}
+
+export async function listCommercialZones(token:string):Promise<CommercialZone[]> {
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/zones?pageSize=200`,{headers:{Authorization:`Bearer ${token}`}});
+  if(response.status===404)return [{id:"sucre",districtId:"DCCH",name:"Sucre"},{id:"monteagudo",districtId:"DCCH",name:"Monteagudo"}];
+  const result=await response.json();if(!response.ok)throw new Error("No se pudieron cargar las zonas comerciales.");
+  const rows=(result.documents||[]).map(documentFields) as CommercialZone[];
+  const defaults=[{id:"sucre",districtId:"DCCH",name:"Sucre"},{id:"monteagudo",districtId:"DCCH",name:"Monteagudo"}];
+  return [...defaults,...rows.filter(row=>!defaults.some(item=>item.id===row.id&&item.districtId===row.districtId))];
+}
+
+export async function saveCommercialZone(token:string,zone:CommercialZone){
+  const slug=zone.id.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+  const documentId=`${zone.districtId}_${slug}`,fields={id:{stringValue:slug},districtId:{stringValue:zone.districtId},name:{stringValue:zone.name.trim()},createdAt:{timestampValue:new Date().toISOString()}};
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/zones/${documentId}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});
+  if(!response.ok)throw new Error("No se pudo crear la zona comercial.");return {...zone,id:slug};
 }
 
 export async function loadProgrammingDays(token:string, dates:string[],districtId="DCCH",zoneId="sucre") {

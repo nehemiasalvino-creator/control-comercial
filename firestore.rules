@@ -7,7 +7,23 @@ service cloud.firestore {
     function superAdmin() { return active() && profile().role == "super_admin"; }
     function nationalViewer() { return active() && profile().role == "national_viewer"; }
     function districtUploader() { return active() && profile().role == "district_uploader"; }
+    function districtViewer() { return active() && profile().role == "district_viewer"; }
+    function zoneAdmin() { return active() && profile().role == "zone_admin"; }
+    function districtAdmin() { return active() && profile().role == "district_admin"; }
     function sameScope(data) { return profile().districtId == data.districtId && profile().zoneId == data.zoneId; }
+    function sameDistrict(data) { return profile().districtId == data.districtId; }
+
+    match /districts/{districtId} {
+      allow read: if active();
+      allow create, update: if superAdmin();
+      allow delete: if false;
+    }
+
+    match /zones/{zoneId} {
+      allow read: if active();
+      allow create, update: if superAdmin();
+      allow delete: if false;
+    }
 
     match /users/{userId} {
       allow read: if signedIn() && (request.auth.uid == userId || superAdmin());
@@ -15,10 +31,10 @@ service cloud.firestore {
     }
 
     match /programmingDays/{programId} {
-      allow read: if active() && (superAdmin() || nationalViewer() || sameScope(resource.data));
-      allow create: if (superAdmin() || (districtUploader() && sameScope(request.resource.data)))
+      allow read: if active() && (superAdmin() || nationalViewer() || (districtViewer() && sameDistrict(resource.data)) || sameScope(resource.data));
+      allow create: if (superAdmin() || (districtAdmin() && sameDistrict(request.resource.data)) || ((zoneAdmin() || districtUploader()) && sameScope(request.resource.data)))
         && request.time < request.resource.data.editableUntil;
-      allow update: if (superAdmin() || (districtUploader() && sameScope(resource.data)))
+      allow update: if (superAdmin() || (districtAdmin() && sameDistrict(resource.data)) || ((zoneAdmin() || districtUploader()) && sameScope(resource.data)))
         && request.time < resource.data.editableUntil
         && request.resource.data.editableUntil == resource.data.editableUntil;
       allow delete: if false;
