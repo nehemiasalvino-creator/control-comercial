@@ -171,3 +171,19 @@ export async function saveIssuedProforma(token:string,id:string,client:ProformaC
   const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/proformas/${id}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});
   if(!response.ok)throw new Error("No se pudo registrar la emisión de la proforma.");
 }
+
+export async function getNextProformaSequence(token:string,year:string):Promise<number> {
+  const id=`DCCH_sucre_${year}`;
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/proformaCounters/${id}`,{headers:{Authorization:`Bearer ${token}`}});
+  if(response.status===404)return 1;
+  const result=await response.json();
+  if(!response.ok)throw new Error("No se pudo obtener el correlativo de proformas.");
+  return Number(result.fields?.lastIssued?.integerValue||0)+1;
+}
+
+export async function saveProformaSequence(token:string,year:string,lastIssued:number) {
+  const id=`DCCH_sucre_${year}`;
+  const fields={districtId:{stringValue:"DCCH"},zoneId:{stringValue:"sucre"},year:{stringValue:year},lastIssued:{integerValue:String(lastIssued)},updatedAt:{timestampValue:new Date().toISOString()}};
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/proformaCounters/${id}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});
+  if(!response.ok)throw new Error("La proforma se registró, pero no se pudo actualizar el correlativo.");
+}
