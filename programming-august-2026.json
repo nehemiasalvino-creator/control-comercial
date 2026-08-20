@@ -1,0 +1,7544 @@
+{
+  "districtId": "DCCH",
+  "zoneId": "sucre",
+  "days": {
+    "2026-08-01": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 25000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 25000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 30000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 25000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 15000,
+          "programmedGas": 50000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 48000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 222000,
+      "stationGas": 335000,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-03": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 40000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 11000,
+          "programmedGas": 21200,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 10500,
+          "programmedGas": 13500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 261500,
+      "stationGas": 363700,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-04": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 30000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 35000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 15000,
+          "programmedGas": 40000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 267000,
+      "stationGas": 335000,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-05": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 30000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 48000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 30000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 15000,
+          "programmedGas": 50000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 48000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 19500,
+          "programmedGas": 16500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 19500,
+          "programmedGas": 16500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 11000,
+          "programmedGas": 21200,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 15000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 13500,
+          "programmedGas": 10500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 10000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 262500,
+      "stationGas": 382700,
+      "directDiesel": 0,
+      "directGas": 10000,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-06": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 0,
+      "stationGas": 0,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-07": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 30000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 30000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 15000,
+          "programmedGas": 40000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 19500,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 19500,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 4900,
+          "programmedGas": 21200,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 15000,
+          "programmedGas": 15000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 15000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 13500,
+          "programmedGas": 10500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 262400,
+      "stationGas": 339700,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-08": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 30000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 35000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 15000,
+          "programmedGas": 50000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 48000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 255000,
+      "stationGas": 320500,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-10": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 20000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 35000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 4900,
+          "programmedGas": 21200,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 13500,
+          "programmedGas": 10500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 258400,
+      "stationGas": 316700,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-11": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 20000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 30000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 19500,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 19500,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 231000,
+      "stationGas": 208000,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-12": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 20000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 20000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 30000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 30000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 19500,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 19500,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 4900,
+          "programmedGas": 21200,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 10000,
+          "programmedGas": 10000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 10000,
+          "programmedGas": 10000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 13500,
+          "programmedGas": 10500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 257400,
+      "stationGas": 260700,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-13": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 20000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 40000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 19500,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 19500,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 219000,
+      "stationGas": 254000,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-14": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 20000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 35000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 4900,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 15000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 15000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 10500,
+          "programmedGas": 13500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 20000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 265400,
+      "stationGas": 274500,
+      "directDiesel": 20000,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-15": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 20000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 15000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 34000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 10000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 30000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 34000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 48000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 20000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 16000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 240000,
+      "stationGas": 288000,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-17": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 20000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 35000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 24000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 4900,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 13500,
+          "programmedGas": 10500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 282400,
+      "stationGas": 307500,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-18": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 25000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 30000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 20000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 40000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 36000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 216000,
+      "stationGas": 295500,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    },
+    "2026-08-19": {
+      "rows": [
+        {
+          "name": "EE.SS. Mariscal Sucre",
+          "category": "station",
+          "diesel": 20000,
+          "gas": 1600,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Azari",
+          "category": "station",
+          "diesel": 8750,
+          "gas": 8000,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO El Morro",
+          "category": "station",
+          "diesel": 28567,
+          "gas": 8750,
+          "compartments": [
+            12500,
+            12500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Juana Azurduy",
+          "category": "station",
+          "diesel": 0,
+          "gas": 21200,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO María Alejandra",
+          "category": "station",
+          "diesel": 7200,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Mesa Verde",
+          "category": "station",
+          "diesel": 16500,
+          "gas": 12500,
+          "compartments": [
+            5000,
+            5000,
+            10000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 20000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Nayler",
+          "category": "station",
+          "diesel": 18033,
+          "gas": 22000,
+          "compartments": [
+            12500,
+            6000,
+            5500
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Oqharikuna SRL",
+          "category": "station",
+          "diesel": 16667,
+          "gas": 16333,
+          "compartments": [
+            20000,
+            15000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 20000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO San Antonio",
+          "category": "station",
+          "diesel": 8333,
+          "gas": 39167,
+          "compartments": [
+            10000,
+            5000,
+            5000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 35000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Trébol SRL",
+          "category": "station",
+          "diesel": 24400,
+          "gas": 17200,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 20000,
+          "programmedGas": 28000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Ostria Gutiérrez · YPFB",
+          "category": "station",
+          "diesel": 5523,
+          "gas": 10099,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS El Tejar · YPFB",
+          "category": "station",
+          "diesel": 7934,
+          "gas": 9226,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Aiquile",
+          "category": "station",
+          "diesel": 4427,
+          "gas": 11823,
+          "compartments": [
+            16300,
+            11300,
+            4900
+          ],
+          "programmedDiesel": 4900,
+          "programmedGas": 24000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Buen Retiro · Padilla",
+          "category": "station",
+          "diesel": 4200,
+          "gas": 4333,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EOSO Murillo · Zudáñez",
+          "category": "station",
+          "diesel": 4267,
+          "gas": 4733,
+          "compartments": [
+            12000,
+            8000,
+            4000
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "E.S. Pujllay · Tarabuco",
+          "category": "station",
+          "diesel": 4350,
+          "gas": 3650,
+          "compartments": [
+            13500,
+            10500
+          ],
+          "programmedDiesel": 13500,
+          "programmedGas": 10500,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Tarabuquillo · YPFB",
+          "category": "station",
+          "diesel": 1652,
+          "gas": 1919,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EESS Serrano · YPFB",
+          "category": "station",
+          "diesel": 1109,
+          "gas": 2533,
+          "compartments": [
+            12000,
+            7500,
+            4500
+          ],
+          "programmedDiesel": 12000,
+          "programmedGas": 12000,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "FANCESSA",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SEDCAM",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "China Harbour",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "San Lucas",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "SERMISUD",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "ENDE Guaracachi",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Ravelo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Raúl Pozo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "EBC",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Yellow",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Alcaldía de Sucre",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Planta Monteagudo",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        },
+        {
+          "name": "Colquechaca",
+          "category": "direct",
+          "diesel": 0,
+          "gas": 0,
+          "compartments": [],
+          "programmedDiesel": 0,
+          "programmedGas": 0,
+          "autoDiesel": 0,
+          "autoGas": 0,
+          "manual": true
+        }
+      ],
+      "stationDiesel": 246400,
+      "stationGas": 294500,
+      "directDiesel": 0,
+      "directGas": 0,
+      "generated": true,
+      "historicalImport": true,
+      "source": "Planilla de programacion a clientes AGOSTO 2026 PRUEBA(1).xlsx"
+    }
+  },
+  "checks": [
+    {
+      "date": "2026-08-01",
+      "diesel": 222000,
+      "gas": 335000,
+      "expectedDiesel": 222000,
+      "expectedGas": 335000,
+      "ok": true
+    },
+    {
+      "date": "2026-08-03",
+      "diesel": 261500,
+      "gas": 363700,
+      "expectedDiesel": 261500,
+      "expectedGas": 363700,
+      "ok": true
+    },
+    {
+      "date": "2026-08-04",
+      "diesel": 267000,
+      "gas": 335000,
+      "expectedDiesel": 267000,
+      "expectedGas": 335000,
+      "ok": true
+    },
+    {
+      "date": "2026-08-05",
+      "diesel": 262500,
+      "gas": 392700,
+      "expectedDiesel": 262500,
+      "expectedGas": 392700,
+      "ok": true
+    },
+    {
+      "date": "2026-08-06",
+      "diesel": 0,
+      "gas": 0,
+      "expectedDiesel": 0,
+      "expectedGas": 0,
+      "ok": true
+    },
+    {
+      "date": "2026-08-07",
+      "diesel": 262400,
+      "gas": 339700,
+      "expectedDiesel": 262400,
+      "expectedGas": 339700,
+      "ok": true
+    },
+    {
+      "date": "2026-08-08",
+      "diesel": 255000,
+      "gas": 320500,
+      "expectedDiesel": 255000,
+      "expectedGas": 320500,
+      "ok": true
+    },
+    {
+      "date": "2026-08-10",
+      "diesel": 258400,
+      "gas": 316700,
+      "expectedDiesel": 258400,
+      "expectedGas": 316700,
+      "ok": true
+    },
+    {
+      "date": "2026-08-11",
+      "diesel": 231000,
+      "gas": 208000,
+      "expectedDiesel": 231000,
+      "expectedGas": 208000,
+      "ok": true
+    },
+    {
+      "date": "2026-08-12",
+      "diesel": 257400,
+      "gas": 260700,
+      "expectedDiesel": 257400,
+      "expectedGas": 260700,
+      "ok": true
+    },
+    {
+      "date": "2026-08-13",
+      "diesel": 219000,
+      "gas": 254000,
+      "expectedDiesel": 219000,
+      "expectedGas": 254000,
+      "ok": true
+    },
+    {
+      "date": "2026-08-14",
+      "diesel": 285400,
+      "gas": 274500,
+      "expectedDiesel": 285400,
+      "expectedGas": 274500,
+      "ok": true
+    },
+    {
+      "date": "2026-08-15",
+      "diesel": 240000,
+      "gas": 288000,
+      "expectedDiesel": 240000,
+      "expectedGas": 288000,
+      "ok": true
+    },
+    {
+      "date": "2026-08-17",
+      "diesel": 282400,
+      "gas": 307500,
+      "expectedDiesel": 282400,
+      "expectedGas": 307500,
+      "ok": true
+    },
+    {
+      "date": "2026-08-18",
+      "diesel": 216000,
+      "gas": 295500,
+      "expectedDiesel": 216000,
+      "expectedGas": 295500,
+      "ok": true
+    },
+    {
+      "date": "2026-08-19",
+      "diesel": 246400,
+      "gas": 294500,
+      "expectedDiesel": 246400,
+      "expectedGas": 294500,
+      "ok": true
+    }
+  ]
+}
