@@ -28,7 +28,7 @@ export type CommercialDistrict={id:string;code:string;name:string};
 export type CommercialZone={id:string;districtId:string;name:string};
 export type ReceiptBusinessUnit={id:string;name:string;type:"EESS"|"PLANTA"|"PUESTO"|"OTRO";districtId:string;zoneId:string;active:boolean};
 export type ReceiptLetterSettings={districtId:string;toName:string;toRole:string;via1Name:string;via1Role:string;via2Name:string;via2Role:string;fromName:string;fromRole:string;prefix:string;lastCorrelative:number;year:number};
-export type OfficialReceiptDelivery={id:string;districtId:string;zoneId:string;unitId:string;unitName:string;dates:string[];noMovementDates:string[];letterNumber:string;deliveredAt:string;status:"delivered"};
+export type OfficialReceiptDelivery={id:string;districtId:string;zoneId:string;unitId:string;unitName:string;dates:string[];noMovementDates:string[];cashGeneralDates:string[];paymentVoucherDates:string[];letterNumber:string;deliveredAt:string;status:"delivered"};
 
 export type ProformaProduct = { detail:string; volume:number; unit:string; price:number };
 export type ProformaClient = {
