@@ -31,12 +31,32 @@ service cloud.firestore {
     }
 
     match /programmingDays/{programId} {
-      allow read: if active() && (superAdmin() || nationalViewer() || (districtViewer() && sameDistrict(resource.data)) || sameScope(resource.data));
+      allow read: if active() && (superAdmin() || nationalViewer() || ((districtAdmin() || districtViewer()) && sameDistrict(resource.data)) || sameScope(resource.data));
       allow create: if (superAdmin() || (districtAdmin() && sameDistrict(request.resource.data)) || ((zoneAdmin() || districtUploader()) && sameScope(request.resource.data)))
         && request.time < request.resource.data.editableUntil;
       allow update: if (superAdmin() || (districtAdmin() && sameDistrict(resource.data)) || ((zoneAdmin() || districtUploader()) && sameScope(resource.data)))
         && request.time < resource.data.editableUntil
         && request.resource.data.editableUntil == resource.data.editableUntil;
+      allow delete: if false;
+    }
+
+    match /receiptBusinessUnits/{unitId} {
+      allow read: if active() && (superAdmin() || nationalViewer() || ((districtAdmin() || districtViewer()) && sameDistrict(resource.data)) || sameScope(resource.data));
+      allow create: if superAdmin() || (districtAdmin() && sameDistrict(request.resource.data)) || ((zoneAdmin() || districtUploader()) && sameScope(request.resource.data));
+      allow update: if superAdmin() || (districtAdmin() && sameDistrict(resource.data)) || ((zoneAdmin() || districtUploader()) && sameScope(resource.data));
+      allow delete: if false;
+    }
+
+    match /receiptSettings/{districtId} {
+      allow read: if active() && (superAdmin() || nationalViewer() || profile().districtId == districtId);
+      allow create, update: if superAdmin() || ((districtAdmin() || zoneAdmin() || districtUploader()) && profile().districtId == districtId);
+      allow delete: if false;
+    }
+
+    match /officialReceiptDeliveries/{deliveryId} {
+      allow read: if active() && (superAdmin() || nationalViewer() || ((districtAdmin() || districtViewer()) && sameDistrict(resource.data)) || sameScope(resource.data));
+      allow create: if superAdmin() || (districtAdmin() && sameDistrict(request.resource.data)) || ((zoneAdmin() || districtUploader()) && sameScope(request.resource.data));
+      allow update: if superAdmin() || (districtAdmin() && sameDistrict(resource.data)) || ((zoneAdmin() || districtUploader()) && sameScope(resource.data));
       allow delete: if false;
     }
 

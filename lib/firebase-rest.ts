@@ -26,6 +26,9 @@ export type ManagedUser = {
 
 export type CommercialDistrict={id:string;code:string;name:string};
 export type CommercialZone={id:string;districtId:string;name:string};
+export type ReceiptBusinessUnit={id:string;name:string;type:"EESS"|"PLANTA"|"PUESTO"|"OTRO";districtId:string;zoneId:string;active:boolean};
+export type ReceiptLetterSettings={districtId:string;toName:string;toRole:string;via1Name:string;via1Role:string;via2Name:string;via2Role:string;fromName:string;fromRole:string;prefix:string;lastCorrelative:number;year:number};
+export type OfficialReceiptDelivery={id:string;districtId:string;zoneId:string;unitId:string;unitName:string;dates:string[];noMovementDates:string[];letterNumber:string;deliveredAt:string;status:"delivered"};
 
 export type ProformaProduct = { detail:string; volume:number; unit:string; price:number };
 export type ProformaClient = {
@@ -163,6 +166,52 @@ export async function saveCommercialZone(token:string,zone:CommercialZone){
   const documentId=`${zone.districtId}_${slug}`,fields={id:{stringValue:slug},districtId:{stringValue:zone.districtId},name:{stringValue:zone.name.trim()},createdAt:{timestampValue:new Date().toISOString()}};
   const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/zones/${documentId}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});
   if(!response.ok)throw new Error("No se pudo crear la zona comercial.");return {...zone,id:slug};
+}
+
+const defaultReceiptUnits:ReceiptBusinessUnit[]=[
+  {id:"eess-camargo",name:"EESS Camargo",type:"EESS",districtId:"DCCH",zoneId:"sucre",active:true},{id:"eess-el-tejar",name:"EESS El Tejar",type:"EESS",districtId:"DCCH",zoneId:"sucre",active:true},{id:"eess-los-sauces",name:"EESS Los Sauces",type:"EESS",districtId:"DCCH",zoneId:"monteagudo",active:true},{id:"eess-monteagudo",name:"EESS Monteagudo",type:"EESS",districtId:"DCCH",zoneId:"monteagudo",active:true},{id:"eess-muyupampa",name:"EESS Muyupampa",type:"EESS",districtId:"DCCH",zoneId:"monteagudo",active:true},{id:"eess-ostria-gutierrez",name:"EESS Ostria Gutiérrez",type:"EESS",districtId:"DCCH",zoneId:"sucre",active:true},{id:"eess-padcoyo",name:"EESS Padcoyo",type:"EESS",districtId:"DCCH",zoneId:"sucre",active:true},{id:"eess-tarabuquillo",name:"EESS Tarabuquillo",type:"EESS",districtId:"DCCH",zoneId:"sucre",active:true},{id:"eess-villa-serrano",name:"EESS Villa Serrano",type:"EESS",districtId:"DCCH",zoneId:"sucre",active:true},{id:"planta-camargo",name:"Planta Camargo",type:"PLANTA",districtId:"DCCH",zoneId:"sucre",active:true},{id:"puesto-venta-huacaya",name:"Puesto de Venta Huacaya",type:"PUESTO",districtId:"DCCH",zoneId:"monteagudo",active:true},{id:"punto-urea-sucre",name:"Punto de Urea Sucre",type:"PUESTO",districtId:"DCCH",zoneId:"sucre",active:true},{id:"zona-monteagudo",name:"Zona Monteagudo",type:"OTRO",districtId:"DCCH",zoneId:"monteagudo",active:true},{id:"zona-sucre",name:"Zona Sucre",type:"OTRO",districtId:"DCCH",zoneId:"sucre",active:true}
+];
+
+export async function listReceiptBusinessUnits(token:string,districtId="DCCH",zoneId?:string):Promise<ReceiptBusinessUnit[]>{
+  const filters=[{fieldFilter:{field:{fieldPath:"districtId"},op:"EQUAL",value:{stringValue:districtId}}}];
+  if(zoneId)filters.push({fieldFilter:{field:{fieldPath:"zoneId"},op:"EQUAL",value:{stringValue:zoneId}}});
+  const where=filters.length===1?filters[0]:{compositeFilter:{op:"AND",filters}};
+  const query={structuredQuery:{from:[{collectionId:"receiptBusinessUnits"}],where,limit:200}};
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents:runQuery`,{method:"POST",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(query)});
+  const result=await response.json();if(!response.ok)throw new Error("No se pudieron cargar las unidades de negocio.");
+  const saved=(result||[]).map((entry:{document?:{name:string;fields?:Record<string,{stringValue?:string}>}})=>entry.document).filter(Boolean).map((document:{name:string;fields?:Record<string,{stringValue?:string}>})=>JSON.parse(document.fields?.payload?.stringValue||"{}")) as ReceiptBusinessUnit[];
+  const defaults=defaultReceiptUnits.filter(unit=>unit.districtId===districtId&&(!zoneId||unit.zoneId===zoneId));
+  return [...defaults.filter(unit=>!saved.some(item=>item.id===unit.id)),...saved].filter(unit=>unit.active!==false).sort((a,b)=>a.name.localeCompare(b.name));
+}
+
+export async function saveReceiptBusinessUnit(token:string,unit:ReceiptBusinessUnit){
+  const fields={districtId:{stringValue:unit.districtId},zoneId:{stringValue:unit.zoneId},name:{stringValue:unit.name},payload:{stringValue:JSON.stringify(unit)},updatedAt:{timestampValue:new Date().toISOString()}};
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/receiptBusinessUnits/${unit.districtId}_${unit.zoneId}_${unit.id}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});
+  if(!response.ok)throw new Error("No se pudo guardar la unidad de negocio.");
+}
+
+export async function getReceiptLetterSettings(token:string,districtId="DCCH"):Promise<ReceiptLetterSettings>{
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/receiptSettings/${districtId}`,{headers:{Authorization:`Bearer ${token}`}});
+  if(response.status===404)return{districtId,toName:"Lic. Karen Eguez Prada",toRole:"Encargada de Contabilidad",via1Name:"Jefe de la Unidad Distrital Comercial",via1Role:"JEFATURA DE UNIDAD",via2Name:"Responsable Administrativo",via2Role:"ÁREA ADMINISTRATIVA",fromName:"Encargado de Estaciones de Servicio",fromRole:"UNIDAD DISTRITAL COMERCIAL",prefix:`YPFB/${districtId}/UDC-ES`,lastCorrelative:0,year:new Date().getFullYear()};
+  const result=await response.json();if(!response.ok)throw new Error("No se pudo cargar la configuración de cartas.");return JSON.parse(result.fields?.payload?.stringValue||"{}");
+}
+
+export async function saveReceiptLetterSettings(token:string,settings:ReceiptLetterSettings){
+  const fields={districtId:{stringValue:settings.districtId},payload:{stringValue:JSON.stringify(settings)},updatedAt:{timestampValue:new Date().toISOString()}};
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/receiptSettings/${settings.districtId}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});if(!response.ok)throw new Error("No se pudo guardar la configuración de la carta.");
+}
+
+export async function listOfficialReceiptDeliveries(token:string,districtId:string,month:string,zoneId?:string):Promise<OfficialReceiptDelivery[]>{
+  const filters=[{fieldFilter:{field:{fieldPath:"districtId"},op:"EQUAL",value:{stringValue:districtId}}},{fieldFilter:{field:{fieldPath:"month"},op:"EQUAL",value:{stringValue:month}}}];
+  if(zoneId)filters.push({fieldFilter:{field:{fieldPath:"zoneId"},op:"EQUAL",value:{stringValue:zoneId}}});
+  const query={structuredQuery:{from:[{collectionId:"officialReceiptDeliveries"}],where:{compositeFilter:{op:"AND",filters}},limit:500}};
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents:runQuery`,{method:"POST",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(query)});const result=await response.json();if(!response.ok)throw new Error("No se pudo cargar el seguimiento mensual.");
+  return (result||[]).map((entry:{document?:{fields?:Record<string,{stringValue?:string}>}})=>entry.document).filter(Boolean).map((document:{fields?:Record<string,{stringValue?:string}>})=>JSON.parse(document.fields?.payload?.stringValue||"{}"));
+}
+
+export async function saveOfficialReceiptDelivery(token:string,delivery:OfficialReceiptDelivery){
+  const month=delivery.dates[0]?.slice(0,7)||delivery.deliveredAt.slice(0,7),fields={districtId:{stringValue:delivery.districtId},zoneId:{stringValue:delivery.zoneId},month:{stringValue:month},unitId:{stringValue:delivery.unitId},payload:{stringValue:JSON.stringify(delivery)},updatedAt:{timestampValue:new Date().toISOString()}};
+  const response=await fetch(`https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/officialReceiptDeliveries/${delivery.id}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({fields})});if(!response.ok)throw new Error("No se pudo registrar la entrega de recibos oficiales.");
 }
 
 export async function loadProgrammingDays(token:string, dates:string[],districtId="DCCH",zoneId="sucre") {
