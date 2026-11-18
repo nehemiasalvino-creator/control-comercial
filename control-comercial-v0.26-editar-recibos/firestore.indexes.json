@@ -1,0 +1,30 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "receiptBusinessUnits",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "districtId", "order": "ASCENDING" },
+        { "fieldPath": "zoneId", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "officialReceiptDeliveries",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "districtId", "order": "ASCENDING" },
+        { "fieldPath": "month", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "officialReceiptDeliveries",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "districtId", "order": "ASCENDING" },
+        { "fieldPath": "month", "order": "ASCENDING" },
+        { "fieldPath": "zoneId", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

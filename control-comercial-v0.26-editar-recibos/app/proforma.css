@@ -1,0 +1,26 @@
+@page proforma { size:letter portrait; margin:10mm }
+
+@media print {
+  body.printing-proforma .proformas-workspace>*:not(.proforma-print) { display:none!important }
+  body.printing-proforma .proforma-print { display:block!important; page:proforma; width:100%; min-height:245mm; border:1px solid #111; color:#111; font-family:Arial,sans-serif }
+  body.printing-proforma .content { padding:0!important }
+  body.printing-proforma .proforma-print>header { display:grid; grid-template-columns:150px 1fr; align-items:center; min-height:95px; border-bottom:1px solid #111 }
+  body.printing-proforma .ypfb-print { display:grid; justify-items:center; padding:12px; color:#d71920 }
+  body.printing-proforma .ypfb-print strong { font-size:28px; font-style:italic }
+  body.printing-proforma .ypfb-print small { color:#174d91; font-size:10px; font-weight:900 }
+  body.printing-proforma .proforma-print>header>div:last-child { text-align:center }
+  body.printing-proforma .proforma-print h1 { margin:0; font-size:21px; letter-spacing:6px; font-weight:500 }
+  body.printing-proforma .proforma-print header p { margin:10px 0 0; font-size:10px; letter-spacing:3px }
+  body.printing-proforma .proforma-meta { display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #111 }
+  body.printing-proforma .proforma-meta p,body.printing-proforma .proforma-client p { margin:0; padding:7px 4px; font-size:10px; letter-spacing:1px }
+  body.printing-proforma .proforma-meta b,body.printing-proforma .proforma-client b { margin-right:14px; letter-spacing:2px }
+  body.printing-proforma .proforma-client { border-bottom:1px solid #111 }
+  body.printing-proforma .proforma-print table { width:100%; border-collapse:collapse; font-size:10px }
+  body.printing-proforma .proforma-print th,body.printing-proforma .proforma-print td { padding:5px; border-right:1px solid #111; border-bottom:1px solid #111 }
+  body.printing-proforma .proforma-print th { letter-spacing:2px }
+  body.printing-proforma .proforma-print th:first-child,body.printing-proforma .proforma-print td:first-child { text-align:left }
+  body.printing-proforma .proforma-print td:not(:first-child),body.printing-proforma .proforma-print th:not(:first-child) { text-align:right }
+  body.printing-proforma .proforma-print tfoot { font-weight:900 }
+  body.printing-proforma .proforma-print tfoot td:first-child { text-align:left }
+  body.printing-proforma .proforma-print .validity { margin:0; padding:8px 4px; font-size:10px; letter-spacing:2px }
+}
