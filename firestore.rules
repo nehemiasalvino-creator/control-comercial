@@ -88,6 +88,13 @@ service cloud.firestore {
       allow delete: if false;
     }
 
+    match /dispatchDrivers/{driverId} {
+      allow read: if active() && (superAdmin() || nationalViewer() || (districtUploader() && sameDistrict(resource.data)) || sameScope(resource.data));
+      allow create: if superAdmin() || (districtUploader() && sameDistrict(request.resource.data));
+      allow update: if superAdmin() || (districtUploader() && sameDistrict(resource.data));
+      allow delete: if false;
+    }
+
     match /proformas/{proformaId} {
       allow get: if active() && (superAdmin() || nationalViewer() || sameScope(resource.data)
         || (districtUploader() && proformaId.matches(profile().districtId + '_' + profile().zoneId + '_.*')));

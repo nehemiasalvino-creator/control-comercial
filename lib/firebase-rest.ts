@@ -106,6 +106,13 @@ export type ProformaClient = {
 export type DispatchPlant =
   "tarabuquillo" | "monteagudo" | "camargo" | "qhora-qhora";
 
+export type DispatchDriver = {
+  id: string;
+  driverName: string;
+  vehiclePlate: string;
+  districtId: string;
+};
+
 export type DispatchOrder = {
   id: string;
   districtId: string;
@@ -120,6 +127,8 @@ export type DispatchOrder = {
   clientName: string;
   controlledRegistry: string;
   bankDocumentNumber: string;
+  driverName: string;
+  vehiclePlate: string;
   product: "diesel" | "gasolina" | "glp";
   productLabel: string;
   quantity: number;
@@ -1009,6 +1018,85 @@ export async function saveDispatchOrderSequence(
   );
   if (!response.ok)
     throw new Error("No se pudo actualizar el correlativo de la planta.");
+}
+
+export async function listDispatchDrivers(
+  token: string,
+  districtId: string,
+): Promise<DispatchDriver[]> {
+  const query = {
+    structuredQuery: {
+      from: [{ collectionId: "dispatchDrivers" }],
+      where: {
+        fieldFilter: {
+          field: { fieldPath: "districtId" },
+          op: "EQUAL",
+          value: { stringValue: districtId },
+        },
+      },
+      limit: 500,
+    },
+  };
+  const response = await fetch(
+    `https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents:runQuery`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(query),
+    },
+  );
+  const result = await response.json();
+  if (!response.ok)
+    throw new Error("No se pudo recuperar el registro de choferes.");
+  return (result || [])
+    .map(
+      (entry: {
+        document?: {
+          name: string;
+          fields: Record<string, { stringValue?: string }>;
+        };
+      }) => entry.document,
+    )
+    .filter(Boolean)
+    .map(
+      (document: {
+        name: string;
+        fields: Record<string, { stringValue?: string }>;
+      }) => {
+        const payload = JSON.parse(
+          document.fields?.payload?.stringValue || "{}",
+        );
+        return { ...payload, id: document.name.split("/").pop() || payload.id };
+      },
+    );
+}
+
+export async function saveDispatchDriver(
+  token: string,
+  driver: DispatchDriver,
+) {
+  const fields = {
+    districtId: { stringValue: driver.districtId },
+    driverName: { stringValue: driver.driverName },
+    vehiclePlate: { stringValue: driver.vehiclePlate },
+    payload: { stringValue: JSON.stringify(driver) },
+    updatedAt: { timestampValue: new Date().toISOString() },
+  };
+  const response = await fetch(
+    `https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/dispatchDrivers/${driver.id}`,
+    {
+      method: "PATCH",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ fields }),
+    },
+  );
+  if (!response.ok) throw new Error("No se pudo guardar el chofer y la placa.");
 }
 
 export async function saveIssuedProforma(

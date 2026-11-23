@@ -2,13 +2,16 @@
 
 import { useEffect, useMemo, useState } from "react";
 import {
+  DispatchDriver,
   DispatchOrder,
   DispatchPlant,
   getNextDispatchOrderSequence,
+  listDispatchDrivers,
   listProformaClients,
   ProformaClient,
   saveDispatchOrder,
   saveDispatchOrderSequence,
+  saveDispatchDriver,
   saveProformaClient,
   SessionUser,
 } from "@/lib/firebase-rest";
@@ -66,6 +69,9 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
   const [product, setProduct] = useState<keyof typeof products>("diesel");
   const [quantity, setQuantity] = useState(0);
   const [bankDocument, setBankDocument] = useState("");
+  const [drivers, setDrivers] = useState<DispatchDriver[]>([]);
+  const [driverName, setDriverName] = useState("");
+  const [vehiclePlate, setVehiclePlate] = useState("");
   const [sealCount, setSealCount] = useState(0);
   const [sealNumbers, setSealNumbers] = useState<string[]>([]);
   const [observations, setObservations] = useState("");
@@ -102,6 +108,16 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
       .then(setSequence)
       .catch((error) => setMessage(error.message));
   }, [user.token, plantId, year]);
+
+  useEffect(() => {
+    listDispatchDrivers(user.token, user.districtId || "DCCH")
+      .then((items) =>
+        setDrivers(
+          items.sort((a, b) => a.driverName.localeCompare(b.driverName)),
+        ),
+      )
+      .catch((error) => setMessage(error.message));
+  }, [user.token, user.districtId]);
 
   function selectClient(client: ProformaClient) {
     setSelectedClient(client);
@@ -152,6 +168,8 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
     setProduct("diesel");
     setQuantity(0);
     setBankDocument("");
+    setDriverName("");
+    setVehiclePlate("");
     setSealCount(0);
     setSealNumbers([]);
     setObservations("");
@@ -171,6 +189,10 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
     }
     if (!bankDocument.trim()) {
       setMessage("Ingrese el número del depósito o documento bancario.");
+      return;
+    }
+    if (!driverName.trim() || !vehiclePlate.trim()) {
+      setMessage("Ingrese el nombre del chofer y la placa del vehículo.");
       return;
     }
     if (sealCount > 0 && sealNumbers.some((number) => !number.trim())) {
@@ -195,6 +217,8 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
       clientName: selectedClient.name,
       controlledRegistry: selectedClient.controlledRegistry || "",
       bankDocumentNumber: bankDocument.trim(),
+      driverName: driverName.trim().toUpperCase(),
+      vehiclePlate: vehiclePlate.trim().toUpperCase(),
       product,
       productLabel: productInfo.label,
       quantity,
@@ -212,6 +236,27 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
       issuedBy: user.email,
     };
     try {
+      const knownDriver = drivers.find(
+        (item) =>
+          item.driverName.toLocaleLowerCase("es") ===
+            order.driverName.toLocaleLowerCase("es") &&
+          item.vehiclePlate.toLocaleLowerCase("es") ===
+            order.vehiclePlate.toLocaleLowerCase("es"),
+      );
+      if (!knownDriver) {
+        const driver: DispatchDriver = {
+          id: crypto.randomUUID(),
+          driverName: order.driverName,
+          vehiclePlate: order.vehiclePlate,
+          districtId: order.districtId,
+        };
+        await saveDispatchDriver(user.token, driver);
+        setDrivers((current) =>
+          [...current, driver].sort((a, b) =>
+            a.driverName.localeCompare(b.driverName),
+          ),
+        );
+      }
       await saveDispatchOrder(user.token, order);
       await saveDispatchOrderSequence(user.token, plantId, year, sequence);
       setPrintOrder(order);
@@ -368,6 +413,56 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
                   onChange={(event) => setBankDocument(event.target.value)}
                   placeholder="Ej.: 518751101"
                 />
+              </div>
+              <div className="dispatch-field">
+                <label>Nombre del chofer</label>
+                <input
+                  list="dispatch-driver-options"
+                  value={driverName}
+                  placeholder="Escriba o seleccione un chofer"
+                  onChange={(event) => {
+                    const value = event.target.value;
+                    setDriverName(value);
+                    const match = drivers.find(
+                      (item) =>
+                        item.driverName.toLocaleLowerCase("es") ===
+                        value.trim().toLocaleLowerCase("es"),
+                    );
+                    if (match) setVehiclePlate(match.vehiclePlate);
+                  }}
+                />
+                <datalist id="dispatch-driver-options">
+                  {drivers.map((driver) => (
+                    <option key={driver.id} value={driver.driverName}>
+                      {driver.vehiclePlate}
+                    </option>
+                  ))}
+                </datalist>
+              </div>
+              <div className="dispatch-field">
+                <label>Placa del vehículo</label>
+                <input
+                  list="dispatch-plate-options"
+                  value={vehiclePlate}
+                  placeholder="Ej.: 1234 ABC"
+                  onChange={(event) => {
+                    const value = event.target.value.toUpperCase();
+                    setVehiclePlate(value);
+                    const match = drivers.find(
+                      (item) =>
+                        item.vehiclePlate.toLocaleLowerCase("es") ===
+                        value.trim().toLocaleLowerCase("es"),
+                    );
+                    if (match) setDriverName(match.driverName);
+                  }}
+                />
+                <datalist id="dispatch-plate-options">
+                  {drivers.map((driver) => (
+                    <option key={driver.id} value={driver.vehiclePlate}>
+                      {driver.driverName}
+                    </option>
+                  ))}
+                </datalist>
               </div>
               <div className="dispatch-field">
                 <label>Número de precintos</label>
@@ -528,6 +623,12 @@ function OrderCopy({ order, copy }: { order: DispatchOrder; copy: string }) {
           <tr>
             <th>REGISTRO SUSTANCIAS CONTROLADAS</th>
             <td colSpan={3}>{order.controlledRegistry || "NO REGISTRADO"}</td>
+          </tr>
+          <tr>
+            <th>CHOFER</th>
+            <td>{order.driverName}</td>
+            <th>PLACA</th>
+            <td>{order.vehiclePlate}</td>
           </tr>
         </tbody>
       </table>
