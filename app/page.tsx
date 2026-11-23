@@ -26,6 +26,7 @@ import {
 } from "@/lib/firebase-rest";
 import { parseDispatchPdf } from "@/lib/pdf-dispatch";
 import OfficialReceipts from "./official-receipts";
+import DispatchOrders from "./dispatch-orders";
 import "./proforma.css";
 
 type Module =
@@ -35,6 +36,7 @@ type Module =
   | "cargas"
   | "programaciones"
   | "proformas"
+  | "ordenes"
   | "recibos"
   | "usuarios";
 
@@ -402,6 +404,10 @@ export default function Home() {
       "Proformas",
       "Registro permanente de empresas y emisión mensual",
     ],
+    ordenes: [
+      "Órdenes de despacho",
+      "Emisión, liquidación automática y copias para cliente y respaldo",
+    ],
     recibos: [
       "Recibos oficiales",
       "Arqueos diarios, cartas de entrega y control mensual",
@@ -466,13 +472,22 @@ export default function Home() {
           )}
           {(user.role === "super_admin" ||
             user.role === "district_uploader") && (
-            <Nav
-              active={module === "proformas"}
-              onClick={() => setModule("proformas")}
-              icon="station"
-            >
-              Proformas
-            </Nav>
+            <>
+              <Nav
+                active={module === "proformas"}
+                onClick={() => setModule("proformas")}
+                icon="station"
+              >
+                Proformas
+              </Nav>
+              <Nav
+                active={module === "ordenes"}
+                onClick={() => setModule("ordenes")}
+                icon="receipt"
+              >
+                Órdenes de despacho
+              </Nav>
+            </>
           )}
           <Nav
             active={module === "recibos"}
@@ -539,6 +554,11 @@ export default function Home() {
           (user.role === "super_admin" ||
             user.role === "district_uploader") && (
             <Proformas token={user.token} />
+          )}
+        {module === "ordenes" &&
+          (user.role === "super_admin" ||
+            user.role === "district_uploader") && (
+            <DispatchOrders user={user} />
           )}
         {module === "recibos" && <OfficialReceipts user={user} />}
         {module === "usuarios" && user.role === "super_admin" && (

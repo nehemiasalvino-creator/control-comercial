@@ -1151,6 +1151,121 @@
   }
 }
 
+.receipt-matrix td.editable-receipt-day {
+  position: relative;
+  min-width: 45px;
+  padding: 3px 2px;
+}
+.editable-receipt-day > span {
+  display: block;
+  font-weight: 900;
+}
+.editable-receipt-day > button {
+  display: block;
+  margin: 2px auto 0;
+  padding: 2px 4px;
+  border: 1px solid #75a88f;
+  border-radius: 4px;
+  background: #fff;
+  color: #087454;
+  font-size: 6px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.editable-receipt-day > button:hover {
+  background: #087454;
+  color: #fff;
+}
+.receipt-day-editor {
+  margin: 12px 14px;
+  padding: 0;
+  border: 1px solid #d4a657;
+  border-radius: 9px;
+  background: #fffaf0;
+  overflow: hidden;
+}
+.receipt-day-editor > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+  padding: 11px 13px;
+  border-bottom: 1px solid #ecd8b3;
+}
+.receipt-day-editor h4 {
+  margin: 0 0 3px;
+  color: #6f4a0c;
+  font-size: 13px;
+}
+.receipt-day-editor header small {
+  color: #806b47;
+  font-size: 8px;
+}
+.receipt-day-editor header > button {
+  width: 27px;
+  height: 27px;
+  border: 0;
+  border-radius: 50%;
+  background: #f3e2c4;
+  color: #714b0d;
+  font-size: 17px;
+  cursor: pointer;
+}
+.receipt-day-editor > div {
+  display: grid;
+  grid-template-columns: 180px auto auto auto minmax(250px, 1fr);
+  align-items: end;
+  gap: 10px;
+  padding: 12px 13px;
+}
+.receipt-day-editor label {
+  display: grid;
+  gap: 5px;
+  color: #58697c;
+  font-size: 8px;
+  font-weight: 850;
+}
+.receipt-day-editor input[type="date"],
+.receipt-day-editor input[type="text"],
+.receipt-day-editor .receipt-edit-reason input {
+  height: 36px;
+  padding: 0 9px;
+  border: 1px solid #d8c59f;
+  border-radius: 7px;
+  background: #fff;
+}
+.receipt-day-editor .receipt-edit-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+}
+.receipt-day-editor > footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 10px 13px;
+  border-top: 1px solid #ecd8b3;
+}
+.receipt-day-editor button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+@media (max-width: 1100px) {
+  .receipt-day-editor > div {
+    grid-template-columns: 1fr 1fr;
+  }
+  .receipt-day-editor .receipt-edit-reason {
+    grid-column: 1/-1;
+  }
+}
+@media print {
+  body.printing-receipt-control .receipt-day-editor,
+  body.printing-receipt-control .editable-receipt-day > button {
+    display: none !important;
+  }
+}
+
 /* El área completa debajo de la línea semanal es el único scroll vertical. */
 .single-week-programming.workspace-scroll {
   display: flex;

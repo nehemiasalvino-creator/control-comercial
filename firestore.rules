@@ -68,9 +68,23 @@ service cloud.firestore {
     }
 
     match /proformaClients/{clientId} {
-      allow read: if active() && (superAdmin() || nationalViewer() || sameScope(resource.data));
-      allow create: if superAdmin() || (districtUploader() && sameScope(request.resource.data));
-      allow update: if superAdmin() || (districtUploader() && sameScope(resource.data));
+      allow read: if active() && (superAdmin() || nationalViewer() || (districtUploader() && sameDistrict(resource.data)) || sameScope(resource.data));
+      allow create: if superAdmin() || (districtUploader() && sameDistrict(request.resource.data));
+      allow update: if superAdmin() || (districtUploader() && sameDistrict(resource.data));
+      allow delete: if false;
+    }
+
+    match /dispatchOrders/{orderId} {
+      allow read: if active() && (superAdmin() || nationalViewer() || (districtUploader() && sameDistrict(resource.data)) || sameScope(resource.data));
+      allow create: if superAdmin() || (districtUploader() && sameDistrict(request.resource.data));
+      allow update: if superAdmin() || (districtUploader() && sameDistrict(resource.data));
+      allow delete: if false;
+    }
+
+    match /dispatchOrderCounters/{counterId} {
+      allow read: if active() && (superAdmin() || (districtUploader() && sameDistrict(resource.data)));
+      allow create: if superAdmin() || (districtUploader() && sameDistrict(request.resource.data));
+      allow update: if superAdmin() || (districtUploader() && sameDistrict(resource.data));
       allow delete: if false;
     }
 

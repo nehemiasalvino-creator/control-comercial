@@ -74,6 +74,15 @@ export type OfficialReceiptDelivery = {
   letterNumber: string;
   deliveredAt: string;
   status: "delivered";
+  editedAt?: string;
+  editedBy?: string;
+  editHistory?: Array<{
+    originalDate: string;
+    correctedDate: string;
+    reason: string;
+    editedAt: string;
+    editedBy: string;
+  }>;
 };
 
 export type ProformaProduct = {
@@ -92,6 +101,39 @@ export type ProformaClient = {
   products: ProformaProduct[];
   districtId: string;
   zoneId: string;
+};
+
+export type DispatchPlant =
+  "tarabuquillo" | "monteagudo" | "camargo" | "qhora-qhora";
+
+export type DispatchOrder = {
+  id: string;
+  districtId: string;
+  zoneId: string;
+  plantId: DispatchPlant;
+  plantName: string;
+  number: string;
+  sequence: number;
+  year: number;
+  date: string;
+  clientId: string;
+  clientName: string;
+  controlledRegistry: string;
+  bankDocumentNumber: string;
+  product: "diesel" | "gasolina" | "glp";
+  productLabel: string;
+  quantity: number;
+  unit: "LITROS" | "KILOGRAMOS";
+  unitPrice: number;
+  productAmount: number;
+  sealCount: number;
+  sealUnitPrice: number;
+  sealsAmount: number;
+  formAmount: number;
+  totalAmount: number;
+  observations: string;
+  issuedAt: string;
+  issuedBy: string;
 };
 
 export async function signIn(
@@ -893,6 +935,79 @@ export async function saveProformaClient(
   );
   if (!response.ok)
     throw new Error("No se pudo guardar la empresa en Firestore.");
+}
+
+export async function getNextDispatchOrderSequence(
+  token: string,
+  plantId: DispatchPlant,
+  year: number,
+) {
+  const id = `${plantId}_${year}`;
+  const response = await fetch(
+    `https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/dispatchOrderCounters/${id}`,
+    { headers: { Authorization: `Bearer ${token}` } },
+  );
+  if (response.status === 404) return 1;
+  const result = await response.json();
+  if (!response.ok)
+    throw new Error("No se pudo obtener el correlativo de la planta.");
+  return Number(result.fields?.lastSequence?.integerValue || 0) + 1;
+}
+
+export async function saveDispatchOrder(token: string, order: DispatchOrder) {
+  const fields = {
+    districtId: { stringValue: order.districtId },
+    zoneId: { stringValue: order.zoneId },
+    plantId: { stringValue: order.plantId },
+    year: { integerValue: String(order.year) },
+    date: { stringValue: order.date },
+    clientId: { stringValue: order.clientId },
+    number: { stringValue: order.number },
+    payload: { stringValue: JSON.stringify(order) },
+    createdAt: { timestampValue: order.issuedAt },
+  };
+  const response = await fetch(
+    `https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/dispatchOrders/${order.id}`,
+    {
+      method: "PATCH",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ fields }),
+    },
+  );
+  if (!response.ok) throw new Error("No se pudo guardar la orden de despacho.");
+}
+
+export async function saveDispatchOrderSequence(
+  token: string,
+  plantId: DispatchPlant,
+  year: number,
+  sequence: number,
+) {
+  const id = `${plantId}_${year}`;
+  const fields = {
+    districtId: { stringValue: "DCCH" },
+    zoneId: { stringValue: "sucre" },
+    plantId: { stringValue: plantId },
+    year: { integerValue: String(year) },
+    lastSequence: { integerValue: String(sequence) },
+    updatedAt: { timestampValue: new Date().toISOString() },
+  };
+  const response = await fetch(
+    `https://firestore.googleapis.com/v1/projects/${firebaseConfig.projectId}/databases/(default)/documents/dispatchOrderCounters/${id}`,
+    {
+      method: "PATCH",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ fields }),
+    },
+  );
+  if (!response.ok)
+    throw new Error("No se pudo actualizar el correlativo de la planta.");
 }
 
 export async function saveIssuedProforma(
