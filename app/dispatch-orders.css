@@ -272,6 +272,28 @@
   color: #6e5510;
   border-radius: 8px;
 }
+.dispatch-seal-numbers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 9px;
+  padding: 12px;
+  background: #f5f8fc;
+  border: 1px solid #dce5ef;
+  border-radius: 10px;
+}
+.dispatch-seal-numbers > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dispatch-seal-numbers small,
+.dispatch-seal-help {
+  font-size: 10px;
+  color: #64778a;
+}
+.dispatch-seal-help {
+  margin-top: 2px;
+}
 .dispatch-help {
   display: block;
   text-align: center;
@@ -488,6 +510,14 @@
   .dispatch-print-costs .total {
     font-size: 8pt;
     background: #e6e6e6;
+  }
+  .dispatch-print-costs .seal-list {
+    align-items: flex-start;
+  }
+  .dispatch-print-costs .seal-list b {
+    text-align: right;
+    max-width: 65%;
+    overflow-wrap: anywhere;
   }
   .dispatch-print-observations {
     margin: 1.2mm 0 0;

@@ -67,6 +67,7 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
   const [quantity, setQuantity] = useState(0);
   const [bankDocument, setBankDocument] = useState("");
   const [sealCount, setSealCount] = useState(0);
+  const [sealNumbers, setSealNumbers] = useState<string[]>([]);
   const [observations, setObservations] = useState("");
   const [sequence, setSequence] = useState(1);
   const [printOrder, setPrintOrder] = useState<DispatchOrder | null>(null);
@@ -76,8 +77,8 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
   const plant = plants.find((item) => item.id === plantId) || plants[0];
   const productInfo = products[product];
   const productAmount = quantity * productInfo.price;
-  const sealsAmount = sealCount * 2.2;
-  const total = productAmount + sealsAmount + 1;
+  const sealsAmount = sealCount * 2.4;
+  const total = productAmount + sealsAmount + 3;
   const orderNumber = `OD-${plant.code}-${String(sequence).padStart(6, "0")}/${year}`;
 
   const filteredClients = useMemo(() => {
@@ -152,6 +153,7 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
     setQuantity(0);
     setBankDocument("");
     setSealCount(0);
+    setSealNumbers([]);
     setObservations("");
     setPrintOrder(null);
     setSequence((value) => value + 1);
@@ -169,6 +171,12 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
     }
     if (!bankDocument.trim()) {
       setMessage("Ingrese el número del depósito o documento bancario.");
+      return;
+    }
+    if (sealCount > 0 && sealNumbers.some((number) => !number.trim())) {
+      setMessage(
+        "Registre el número de cada precinto antes de emitir la orden.",
+      );
       return;
     }
     setBusy(true);
@@ -194,9 +202,10 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
       unitPrice: productInfo.price,
       productAmount,
       sealCount,
-      sealUnitPrice: 2.2,
+      sealNumbers,
+      sealUnitPrice: 2.4,
       sealsAmount,
-      formAmount: 1,
+      formAmount: 3,
       totalAmount: total,
       observations: observations.trim(),
       issuedAt,
@@ -367,11 +376,56 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
                   min="0"
                   step="1"
                   value={sealCount || ""}
-                  onChange={(event) =>
-                    setSealCount(Math.max(0, Number(event.target.value) || 0))
-                  }
+                  onChange={(event) => {
+                    const count = Math.max(
+                      0,
+                      Math.floor(Number(event.target.value) || 0),
+                    );
+                    setSealCount(count);
+                    setSealNumbers((current) =>
+                      Array.from(
+                        { length: count },
+                        (_, index) => current[index] ?? "",
+                      ),
+                    );
+                  }}
                 />
               </div>
+              {sealCount > 0 && (
+                <div className="dispatch-field dispatch-wide">
+                  <label>Números de precintos</label>
+                  <div className="dispatch-seal-numbers">
+                    {sealNumbers.map((seal, index) => (
+                      <div key={index}>
+                        <small>Precinto {index + 1}</small>
+                        <input
+                          inputMode="numeric"
+                          value={seal}
+                          placeholder={`N.º ${index + 1}`}
+                          onChange={(event) => {
+                            const value = event.target.value;
+                            setSealNumbers((current) => {
+                              const next = [...current];
+                              next[index] = value;
+                              if (index === 0 && /^\d+$/.test(value)) {
+                                const first = Number(value);
+                                for (let i = 1; i < next.length; i += 1) {
+                                  next[i] = String(first + i);
+                                }
+                              }
+                              return next;
+                            });
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <small className="dispatch-seal-help">
+                    Al ingresar el primero, los siguientes se completan
+                    correlativamente; puede editar cualquiera de ellos.
+                  </small>
+                </div>
+              )}
               <div className="dispatch-field dispatch-wide">
                 <label>Observaciones (opcional)</label>
                 <textarea
@@ -399,13 +453,13 @@ export default function DispatchOrders({ user }: { user: SessionUser }) {
               <div>
                 <dt>Precintos</dt>
                 <dd>
-                  {sealCount} × Bs 2,20<b>Bs {money(sealsAmount)}</b>
+                  {sealCount} × Bs 2,40<b>Bs {money(sealsAmount)}</b>
                 </dd>
               </div>
               <div>
                 <dt>Formulario</dt>
                 <dd>
-                  1 × Bs 1,00<b>Bs 1,00</b>
+                  1 × Bs 3,00<b>Bs 3,00</b>
                 </dd>
               </div>
             </dl>
@@ -501,9 +555,17 @@ function OrderCopy({ order, copy }: { order: DispatchOrder; copy: string }) {
       </table>
       <div className="dispatch-print-costs">
         <p>
-          <span>PRECINTOS: {order.sealCount} × Bs 2,20</span>
+          <span>PRECINTOS: {order.sealCount} × Bs 2,40</span>
           <b>Bs {money(order.sealsAmount)}</b>
         </p>
+        {order.sealCount > 0 && (
+          <p className="seal-list">
+            <span>NÚMEROS DE PRECINTOS</span>
+            <b>
+              {order.sealNumbers.filter(Boolean).join(", ") || "SIN REGISTRAR"}
+            </b>
+          </p>
+        )}
         <p>
           <span>FORMULARIO</span>
           <b>Bs {money(order.formAmount)}</b>

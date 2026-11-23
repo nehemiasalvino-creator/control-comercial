@@ -127,6 +127,7 @@ export type DispatchOrder = {
   unitPrice: number;
   productAmount: number;
   sealCount: number;
+  sealNumbers: string[];
   sealUnitPrice: number;
   sealsAmount: number;
   formAmount: number;
